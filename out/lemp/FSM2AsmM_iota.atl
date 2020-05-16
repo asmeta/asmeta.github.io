@@ -1,0 +1,202 @@
+module FSM2AsmM_iota; 
+-- Semantic hooking
+-- Model handlers: EMF
+-- Files involved in the transformation: 
+-- Metamodels - FSM.ecore, AsmM.ecore 
+-- Models - evenFSM.xmi (IN1, conforms to fsm), gamma_FSM.xmi (IN2, conforms to AsmM)
+
+create OUT : AsmM from IN1 : fsm, IN2 : AsmM;
+
+-- This rule refines an AsmM!Asm, along with its associated AsmM!Initialization,
+-- from a terminal model myFSM : fsm!Fsm and the ASM m_FSM : AsmM!Asm (without initial state)
+-- for the FSM metamodel 
+rule Fsm2Asm {
+  from 
+     myFSM : fsm!Fsm, gamma_FSM : AsmM!Asm 
+  
+  to
+   new_header : AsmM!Header (
+		importClause <- gamma_FSM.headerSection.importClause, 	
+	    exportClause <- gamma_FSM.headerSection.exportClause, 	
+        signature <- thisModule.initializeDomains(myFSM,gamma_FSM.headerSection.signature)
+		),
+		
+	initialization : AsmM!Initialization (
+		              functionInitialization <- Sequence{thisModule.initFunctOnNamedElement(myFSM,new_header.signature),
+						                               thisModule.initFunctOnFsm(myFSM,new_header.signature),
+													   thisModule.initFunctOnState(myFSM,new_header.signature),
+													   thisModule.initFunctOnTransition(myFSM,new_header.signature)}),	
+		
+    out : AsmM!Asm (
+                	name <- 'ASM_'+myFSM.name,
+					headerSection <- new_header,
+					bodySection <- gamma_FSM.bodySection,
+					mainrule <- gamma_FSM.mainrule,
+					initialState <- thisModule.initializeFunctions(myFSM,new_header.signature)
+					)
+}
+
+
+-- This rule generates an AsmM!Signature, with new 0-ary function symbols for instances 
+-- of the Fsm classes, from a terminal model myFSM : fsm!Fsm and the signature 
+-- gamma_FSM_s : AsmM!Signature of the ASM for the FSM metamodel 
+
+ lazy rule initializeDomains {
+	from
+		      myFSM : fsm!Fsm, gamma_FSM_s : AsmM!Signature
+	to
+	  out: AsmM!Signature (
+	 	function <- Sequence{
+        fsm!Fsm->allInstances()->collect(e | thisModule.createFSMDomainElement(e,gamma_FSM_s)),
+		fsm!State->allInstances()->collect(e | thisModule.createStateDomainElement(e,gamma_FSM_s)),
+		fsm!Transition->allInstances()->collect(e | thisModule.createTransitionDomainElement(e,gamma_FSM_s)) } ->flatten() 
+        )
+  }
+
+
+-- This rule generates a 0-ary AsmM!StaticFunction corresponding to an instance 'e'
+-- of the terminal model myFSM
+lazy rule createFSMDomainElement {
+	from
+				e : fsm!Fsm, new_gamma_FSM_s : AsmM!Signature
+	to
+				out: AsmM!StaticFunction (
+                                    name <- e.name, 
+			  	    arity <- 0,
+					-- codomain <- new_gamma_FSM_s.domain->select(D | D.name = e.oclType().name)
+					codomain <- new_gamma_FSM_s.domain->select(D | D.name = 'Fsm')
+				)
+}
+
+lazy rule createStateDomainElement {
+	from
+				e : fsm!State, new_gamma_FSM_s : AsmM!Signature
+	to
+				out: AsmM!StaticFunction (
+                                    name <- e.name, 
+			  	    arity <- 0,
+                                    -- codomain <- new_gamma_FSM_s.domain->select(D | D.name = e.oclType().name)
+                                    codomain <- new_gamma_FSM_s.domain->select(D | D.name = 'State')
+				)
+}
+
+lazy rule createTransitionDomainElement {
+	from
+				e : fsm!Transition, new_gamma_FSM_s : AsmM!Signature
+	to
+				out: AsmM!StaticFunction (
+                                    name <- e.name, 
+			  	    arity <- 0,
+                                    -- codomain <- new_gamma_FSM_s.domain->select(D | D.name = e.oclType().name)
+                                    codomain <- new_gamma_FSM_s.domain->select(D | D.name = 'Transition')
+				)
+}
+
+-- This rule generates an AsmM!Initialization from a terminal model myFSM : fsm!Fsm and 
+-- the new signature new_m_FSM_s : AsmM!Signature of the ASM for the FSM metamodel 
+lazy rule initializeFunctions {
+	from
+				myFSM : fsm!Fsm, sig : AsmM!Signature
+	to
+				out: AsmM!Initialization (
+					functionInitialization <- Sequence{thisModule.initFunctOnNamedElement(myFSM,new_m_FSM_s),
+						                               thisModule.initFunctOnFsm(myFSM,new_m_FSM_s),
+													   thisModule.initFunctOnState(myFSM,new_m_FSM_s),
+													   thisModule.initFunctOnTransition(myFSM,new_m_FSM_s)}
+				)
+}
+
+lazy rule initFunctOnNamedElement {
+	from
+				myFSM : fsm!Fsm, sig : AsmM!Signature
+	to
+	            var: AsmM!VariableTerm ( 
+	            	 name <- '$e',
+					 kind <- AsmM!VariableKind.logicalVar,
+					 domain <- sig.domain->select(d | d.name = 'NamedElement')->first()
+				), 			
+				
+				tuple1: AsmM!TupleTerm (
+					arity <- 1+myFSM.states->size(),myFSM.transitions->size(),
+					terms <- Sequence { thisModule.createPair(myFSM,sig),
+						                foreach(s in myFSM.states) thisModule.createPair(s,sig),
+										foreach(t in myFSM.transitions) thisModule.createPair(t,sig)
+					          }
+						           				
+				  ),
+				  
+				mapTerm: AsmM!MapCT (
+				     pair <- tuple1
+				),
+				
+				tuple2: AsmM!TupleTerm (
+					arity <- 2,
+					terms <- Sequence {mapTerm,var}
+					
+				  ),
+				
+				term: AsmM!FunctionTerm (
+				  function <- sig.function->select(f | f.name = 'at')->first(),
+				  arguments <- tuple2
+				  
+				),
+	
+	            out: AsmM!FunctionInitialization (
+					initializedFunction <- sig.function->select(f | f.name = 'name')->first(),
+					variable <- var,
+					body <- term
+				)
+}
+
+
+
+-- This rule generates a pair (e,"e") for each 0-ary AsmM!StaticFunction corresponding to a named instance 'e'
+-- of the terminal model myFSM
+lazy rule createPair {
+	from e:AsmM!NamedElement,sig: AsmM!Signature) 
+	to  
+	    emptytuple: AsmM!TupleTerm (
+					arity <- 0,
+					terms <- Sequence {}	
+				  ),
+	
+	    fTerm: AsmM!FunctionTerm (
+				  function <- sig.function->select(f | f.name = e.name)->first(),
+				  arguments <- emptytuple -- 0-ary function 
+				),
+	
+	    out: AsmM!TupleTerm (
+		           arity <- 2,
+		           terms <- Sequence {fTerm,e.name})
+                    
+}
+
+lazy rule initFunctOnFsm {
+	from
+				myFSM : fsm!Fsm, sig : AsmM!Signature
+	to
+				out: AsmM!FunctionInitialization (
+					-- To complete
+					
+				)
+}
+
+lazy rule initFunctState {
+	from
+				myFSM : fsm!Fsm, sig : AsmM!Signature
+	to
+				out: AsmM!FunctionInitialization (
+					
+					-- To complete
+					
+				)
+}
+
+lazy rule initFunctOnTransition {
+	from
+				myFSM : fsm!Fsm, sig : AsmM!Signature
+	to
+				out: AsmM!FunctionInitialization (
+					-- To complete
+				)
+}

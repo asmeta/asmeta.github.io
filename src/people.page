@@ -1,0 +1,53 @@
+---
+title: People
+in_menu: true
+---
+## People involved:
+
+<ul>
+  <li> <strong>Elvinia Riccobene</strong>, Dipartimento di Informatica - Universit&agrave; degli Studi di Milano, Italy<br/>
+    <a href="http://homes.di.unimi.it/~riccobene/" target="_blank">http://homes.di.unimi.it/~riccobene/</a>
+  </li>
+  <li> <strong>Angelo Gargantini</strong>, Dipartimento di Ingegneria - Universit&agrave; degli Studi di Bergamo, Italy<br/>
+	<a href="http://cs.unibg.it/gargantini/" target="_blank">http://cs.unibg.it/gargantini/</a>
+  </li>
+  <li>
+    <strong>Patrizia Scandurra</strong>, Dipartimento di Ingegneria - Universit&agrave; degli Studi di Bergamo, Italy<br/>
+    <a href="http://cs.unibg.it/scandurra/" target="_blank">http://cs.unibg.it/scandurra/</a>
+  </li>
+  <li><strong>Paolo Arcaini</strong>, National Institute of Informatics, Japan<br/>
+    <a href="http://group-mmm.org/~arcaini/" target="_blank">http://group-mmm.org/~arcaini/</a>
+  </li>
+  <li><strong>Silvia Bonfanti</strong>, Dipartimento di Ingegneria - Universit&agrave; degli Studi di Bergamo, Italy<br/>
+	<a href="http://cs.unibg.it/bonfanti/" target="_blank">http://cs.unibg.it/bonfanti/</a>
+  </li>
+</ul>
+
+## Other people
+
+Other [people](papers/others.html) from around the world are using Asmeta.
+
+<p>We hope to continually make this project better and larger. If you have any ideas, comments, or concerns please contact us.</p>
+<h3>Past help:</h3>
+<ul>
+  <li><strong>Pasqualina Potena</strong>, SICS Swedish ICT, Sweden<br/>
+  </li>
+  <li><strong>Andrea Arnoldi e Marco Dolci</strong> - Universit&agrave; degli Studi di Bergamo, Italy<br/>
+helped us to develop AsmetaRE<br/>
+  </li>
+  <li><strong>Fabio Albani</strong> - Universit&agrave; degli Studi di Bergamo, Italy<br/>
+helped us to develop SCA-ASM<br/>
+  </li>
+  <li><strong>Aleassandro Carioni</strong>, Dipartimento di Tecnologie dell'Informazione, Universit&agrave; degli Studi di Milano, Italia<br/>
+  Alessandro worked on the simulator and the validator during his PhD at Unimi. 
+  </li>
+  <li> <strong>Claudia Genovese, Tiziana Genovese </strong> - Dipartimento di Matematica e Informatica - Universit&agrave; di Catania, Italy<br/>
+helped us to define the metamodel and the AsmetaL grammar<br/>
+  </li>
+  <li>
+    <strong>Enrico Messina</strong> helped us to define documentation scripts
+  </li>
+  <li>
+    <strong>Francesco Frasca</strong> helped us to define the metamodel
+  </li>
+</ul>

@@ -1,0 +1,20 @@
+---
+title: Metamodel
+in_menu: false
+routed_title: Metamodel
+sort_info: 1
+---
+
+<p>The <strong>Abstract State Machine Metamodel</strong> (<strong>AsmM</strong>, in brief) is a metamodel for the <strong><a href="http://www.eecs.umich.edu/gasm/">Abstract State Machines</a></strong> (<strong>ASMs</strong>) formal method developed by following the guidelines of the <strong><a href="http://en.wikipedia.org/wiki/Model_Driven_Engineering">Model-Driven Engineering</a></strong> (<strong>MDE</strong>).</p>
+<p>We exploit the metamodelling approach suggested by MDE to achieve the goals of developing a unique notation for ASM, a notation independent from any specific implementation syntax and allowing a more direct encoding of the ASM mathematical concepts and constructs, and tacking the problem of ASM tool interoperability.</p>
+<p>The AsmM can be seen as a <em>pivot metamodel </em>towards a definition of a standard family of languages for the ASMs and a systematic integration of ASM tools. Through metamodels and model transformations, the metamodel of each tool (usually not given explicitly, but is built-in into the tool that provide it) is linked to those of other tools by the logical pivot metamodel which abstracts a certain number of general concepts about ASMs.</p>
+<p>The <strong>AsmM</strong> is defined by using <a href="http://www.eclipse.org/modeling/emf/">EMF</a>, the modelling framework proposed by <a href="http://www.eclipse.org/">eclipse</a>. It was originally has been defined by using the <a  href="http://www.omg.org/spec/MOF/">MOF</a> (v. 1.4) meta-language of the <a href="http://www.omg.org">Object Management Group (OMG)</a> framework.</p>
+<p align="justify">The AsmM definition comprises:</p>
+<ol>
+<li>an<strong> abstract syntax</strong>, i.e., an EMF-compliant metamodel representing in an abstract way concepts and constructs of the ASM formalism as described in the <a href="http://www.di.unipi.it/~boerger/AsmBook/">ASM book</a>;<br/></li>
+<li>a<strong> concrete syntax </strong>(<strong>AsmetaL : the Asmeta Language</strong>),<strong> </strong>namely an EBNF (extended Backus-Naur Form)
+grammar derived from the AsmM (the abstract syntax) as a notation to be used by modelers to effectively write ASM models in a textual form;<br/></li>
+<li>an <strong>interchange syntax</strong>, i.e., a standard <a href="http://www.omg.org/spec/XMI/">XMI</a>-based format automatically derived from the AsmM, for the interchange of ASM models among tools.</li>
+</ol>
+<p>For the <strong>metamodel semantics</strong>, we adopt the ASMs semantics given in the <a href="http://www.di.unipi.it/~boerger/AsmBook/">ASM book</a>.</p>
+<p>A standard <strong>AsmM Library</strong> containing predefined ASM domains and functions is also provided.</p>

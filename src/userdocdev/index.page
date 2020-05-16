@@ -1,0 +1,15 @@
+---
+title: Developer information
+in_menu: true
+routed_title: Developer documentation
+orderInfo: 9999
+---
+
+<body>
+<p> This section provides information for contributing to the Asmeta and to use it to develop new tools. The project is hosted on the <a href="http://sourceforge.net">SourceForge.net</a> platform, its overview page is <a href="http://sourceforge.net/projects/asmeta">http://sourceforge.net/projects/a<span class="style1">smeta</span></a>. You can:</p>
+<li>submit <a href="http://sourceforge.net/p/asmeta/bugs/">Bugs</a></li>
+<li>request support: <a href="http://sourceforge.net/projects/asmeta/support">Support Requests</a></li>
+<li><a href="http://sourceforge.net/p/asmeta/bugs/">Feature Requests</a></li>
+<li><a href="http://sourceforge.net/p/asmeta/discussion/">Public Forums</a> for open discussions</li>
+<p>Here you can find some information about the <a href="architecture.html">architecture</a> of the Asmeta framework, information about <a href="repository.html">how to access the sources</a>, and a small list of <a href="todos.html">todos</a>.</p>
+</body>

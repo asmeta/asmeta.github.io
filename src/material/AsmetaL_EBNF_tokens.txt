@@ -1,0 +1,174 @@
+/***************************************************************
+-------------------------   TOKENS   ---------------------------
+***************************************************************/
+
+<DEFAULT,GENERIC_ID,MODULE_ID>  
+SKIP:
+{
+  " "
+    | "\r"
+    | "\t"
+    | "\n"
+    |  <"//" (~["\n","\r"])* ("\n" | "\r" | "\r\n")>              // skip line-comments
+    |  <"/*" (~["*"])* "*" ("*" | ~["*","/"] (~["*"])* "*")* "/"> // skip  block-comments
+    }
+
+
+/* RESERVED WORDS */
+TOKEN :
+{   
+//for Asm structure
+    <   ASM         :"asm"        > :GENERIC_ID
+|   <   MODULE      :"module"     > :GENERIC_ID   
+|   <   ASYNCR      :"asyncr"     >
+|   <   IMPORT      :"import"     > :MODULE_ID
+|   <   EXPORT      :"export"     > 
+|   <   SIGNATURE   :"signature"  > 
+|   <   INIT        :"init"       > :GENERIC_ID
+|   <   Default     :"default"    >
+|   <   AGENT       :"agent"      >
+|   <   INVARIANT   :"invariant"  >
+|   <   OVER        :"over"       >
+|   <   DEFINITIONS  :"definitions" > 
+
+//for functions
+|   <   FUNCTION    :"function"   >
+|   <   STATIC      :"static"     >    
+|   <   DYNAMIC     :"dynamic"    >
+|   <   DERIVED     :"derived"    >
+|   <   MONITORED   :"monitored"  >
+|   <   CONTROLLED  :"controlled" >
+|   <   SHARED      :"shared"     >
+|   <   OUT         :"out"        >
+
+//for domains
+|   <   DOMAIN      :"domain"     >
+|   <   ANYDOMAIN   :"anydomain"  >
+|   <   BASIC       :"basic"      >
+|   <   ABSTRACT    :"abstract"   >
+|   <   ENUM        :"enum"       >
+|   <   SUBSETOF    :"subsetof"   >
+//for Structured Type Domain 
+|   <   PROD        :"Prod"       >
+|   <   SEQ         :"Seq"        >  
+|   <   POWERSET    :"Powerset"   >
+|   <   BAG         :"Bag"        >
+|   <   MAP         :"Map"        >
+
+//for constant term
+|   <   TRUE        :"true"       >
+|   <   FALSE       :"false"      >
+|   <   UNDEF       :"undef"      >
+|   <   IM_PART     :"i"          >
+
+//for extended term
+|   <   IF          :"if"         >
+|   <   THEN        :"then"       >
+|   <   ELSE        :"else"       >
+|   <   ENDIF       :"endif"      >
+
+|   <   SWITCH      :"switch"     >
+|   <   END_SWITCH  :"endswitch"  >
+
+|   <   CASE        :"case"       >
+|   <   OTHERWISE   :"otherwise"  >
+|   <   ENDCASE     :"endcase"    >
+
+|   <   LET         :"let"        >
+|   <   ENDLET      :"endlet"     >
+
+|   <   EXIST       :"exist"      >
+|   <   UNIQUE      :"unique"     >
+|   <   WITH        :"with"       >
+|   <   FORALL      :"forall"     >
+
+//for rules
+|   <   Skip        :"skip"       >  
+|   <   RULE        :"rule"       >
+|   <   MACRO       :"macro"      >
+|   <   TURBO       :"turbo"      >
+|   <   MAIN        :"main"       >
+
+|   <   PAR         :"par"        >
+|   <   ENDPAR      :"endpar"     >
+|   <   CHOOSE      :"choose"     >
+|   <   DO          :"do"         >
+|   <   IFNONE      :"ifnone"     >
+|   <   EXTEND      :"extend"     >
+|   <   seq         :"seq"        >  //SEQ already defined for the sequence domain
+|   <   ENDSEQ      :"endseq"     >
+|   <   ITERATE     :"iterate"    >
+|   <   ENDITERATE  :"enditerate" >
+|   <   LOCAL       :"local"      >
+|   <   TRY         :"try"        >
+|   <   CATCH       :"catch"      >
+|   <   WHILE       :"while"      >
+|   <   WHILEREC    :"whilerec"   >
+|   <   IN          :"in"         > //IN for terms and rules
+
+/* INFIX OPERATORS */
+
+     |  <EQ     : "="   >
+     |  <LT 	 : "<"   >
+     |  <LE 	 : "<="  >
+     |  <GT 	 : ">"   >
+     |  <GE 	 : ">="  >
+     |  <NEQ	 : "!="  >
+     |  <PLUS   : "+"   >
+     |  <MINUS  : "-"   >
+     |  <MULT   : "*"   >
+     |  <DIV    : "/"   >
+     |  <PWR    : "^"   >
+}
+
+/* IDENTIFIERS AND NUMBERS */
+
+TOKEN :
+{   
+    <   NUMBER         : (<DIGIT>)+>
+|   <   NATNUMBER      : (<DIGIT>)+"n"                           >
+|   <   REAL_NUMBER    : (<DIGIT>)+ "." (<DIGIT>)+ >
+|   <   COMPLEX_NUMBER : ((["+","-"])? (<DIGIT>)+ ("." (<DIGIT>)+)?)? 
+                           (["+","-"])? "i" ((<DIGIT>)+ ("." (<DIGIT>)+)?)? >
+   
+|   <   ID_VARIABLE : "$" <LETTER> (<LETTER>|<DIGIT>)*          >
+|   <   ID_ENUM     : ["A"-"Z"] ["A"-"Z"] ("_"|["A"-"Z"]|<DIGIT>)*>
+|   <   ID_DOMAIN   : ["A"-"Z"] ("_"|["a"-"z"]|["A"-"Z"]|<DIGIT>)* >
+|   <   ID_RULE     : "r_" (<LETTER>|<DIGIT>)+ >
+|   <   ID_INVARIANT: "inv_" (<LETTER>|<DIGIT>)+ >     
+|   <   ID_FUNCTION : (["a"-"z"]) (<LETTER>|<DIGIT>)* > 
+
+|   < #LETTER: ["_","a"-"z","A"-"Z"] >          
+|   < #DIGIT: ["0"-"9"] >     
+
+|   <   CHAR_LITERAL :   // from Java1.5 grammar
+                        "'" (   (~["'","\\","\n","\r"])
+                                   | ("\\"
+                                    ( ["n","t","b","r","f","\\","'","\""]
+                                       | ["0"-"7"] ( ["0"-"7"] )?
+                                       | ["0"-"3"] ["0"-"7"] ["0"-"7"]
+                                    )  
+                                 )
+                        )* "'" >
+  
+
+|  <   STRING_LITERAL  :   // from Java1.5 grammar
+                        "\"" (   (~["\"","\\","\n","\r"])
+                                | ("\\"
+                                    ( ["n","t","b","r","f","\\","'","\""]
+                                       | ["0"-"7"] ( ["0"-"7"] )?
+                                       | ["0"-"3"] ["0"-"7"] ["0"-"7"]
+                                    )  
+                                  )
+                        )* "\"" >
+}    
+
+<GENERIC_ID> TOKEN:
+{
+   <   ID    : <LETTER> (<LETTER>|<DIGIT>)* >  :DEFAULT
+}
+
+<MODULE_ID> TOKEN:
+{
+   <   MOD_ID    : (<LETTER>|"."|"/"|"\\") (<LETTER>|<DIGIT>|"."|"/"|"\\"|":")* >  :DEFAULT
+}

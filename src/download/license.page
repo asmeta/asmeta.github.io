@@ -1,0 +1,41 @@
+---
+title: License
+in_menu: false
+routed_title: License
+sort_info: ZZZZ
+---
+## Asmeta licensing information
+Asmeta is released under the GPL license:<br/>
+<pre><var>Copyright (c) 2005, 2006 FMSELAB @ UNIMI (http://fmse.di.unimi.it/)<br/><br/>License Information: http://asmeta.sourceforge.net/license.html<br/><br/></var>Asmeta is free software; you can redistribute it and/or<br/>modify it under the terms of the GNU General Public License<br/>as published by the Free Software Foundation; either version 2<br/>of the License, or (at your option) any later version.<br/><br/>This program is distributed in the hope that it will be useful,<br/>but WITHOUT ANY WARRANTY; without even the implied warranty of<br/>MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the<br/>GNU General Public License for more details.<br/><br/>You should have received a copy of the GNU General Public License<br/>along with this program; if not, write to the Free Software<br/><br/>Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA</pre>
+<br/>
+However, since Asmeta software relies on several libraries and the
+eclipse plugin uses Eclipse software, which are free but not GPL
+compatible, we add an exception (as suggested by the FSF):<br/>
+<pre>In addition, as a special exception, FMSELAB @ UNIMI gives permission to link the code of this program with <br/>the JMI &amp; MDR (all the jar files distributed by the mdr project of netbeans), LOG4J and eclipse libraries, <br/>and distribute linked combinations including the two, as long as these libraries remain released under a free software <br/>license according to the FSF.<br/>If you modify this file, you may extend this exception to your version of the<br/>file, but you are not obligated to do so. If you do not wish to<br/>do so, delete this exception statement from your version.<br/></pre>
+Asmeta is GPL compatible.<br/>
+<br/>
+Asmeta will be released with an EPL licence soon.<br/>
+<h3>Log4J license</h3>
+Log4J is Copyright 1999-2006, Apache Software Foundation and Licensed
+under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache
+License, Version 2.0</a>.<br/>
+<h3>Eclipse license</h3>
+Eclipse libraries are released under the <a
+ href="http://www.eclipse.org/org/documents/epl-v10.php">Eclipse Public
+License</a>
+<h2>Dual Licensing</h2>
+If you like to use Asmeta and do not want to use the GPLed version of
+Asmeta (for example you want to embed Asmeta in a proprietary non free
+software), contact us: we can provide Asmeta with a non free license
+according to the <a href="http://en.wikipedia.org/wiki/Dual_license">
+dual licensing model</a>.<br/>
+<br/>
+<h2>FAQ on licensing</h2>
+<dl>
+  <dt><b>Can I use ASMETA software to develop non-free ASM specifications?<br/>
+    </b></dt>
+  <dd>Yes, because the copyright on the editors and tools included in
+ASMETA does not cover the code and the specifications you write. Using
+them does not place any restrictions, legally, on the license you use
+for your code.</dd>
+</dl>

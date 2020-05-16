@@ -1,0 +1,29 @@
+---
+title: Scenario refiner
+in_menu: true
+routed_title: AsmScenRef
+sort_info: 7
+---
+
+
+The **AsmScenRef** (Asmeta Scenario Refiner) can be used to automatically
+generate refined scenarios. Given an abstract model A, a scenario Sa for A, and a refined model R, the tool automatically generates a scenario Sr for R.<br/>
+
+### Download
+
+<p>Download the tool: <a href="https://sourceforge.net/p/asmeta/code/HEAD/tree/code/experimental/scenarioRefinement/AsmScenRef.jar?format=raw">AsmScenRef.jar</a></p>
+<h3>How to run<br/>
+</h3>
+To run AsmScenRef
+<pre>java -jar AsmScenRef.jar [options...] abstractScenario.test refinedModel.asm
+ -strongMap  : use the strong version of the mapping function (if not specified, the relaxed version is used)
+</pre>
+
+<p>The tool uses the NuSMV model checker that must be installed in the system and added to the system path. NuSMV can be downloaded from here: <a href="http://nusmv.fbk.eu/" target='_blank'>
+http://nusmv.fbk.eu/</a></p>
+
+### Benchmarks
+A benchmark set of models, abstract scenarios, and automatically generated refined scenarios, is available <a href="http://fmse.di.unimi.it/sw/expAMOST2019.zip">here</a>.
+
+## Paper
+P. Arcaini, E. Riccobene. Automatic Refinement of ASM Abstract Test Cases, in 15th Workshop on Advances in Model Based Testing (A-MOST 2019), Xi'an, China, April 22, 2019 [doi](https://doi.org/10.1109/ICSTW.2019.00025)

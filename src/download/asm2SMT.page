@@ -1,0 +1,18 @@
+---
+title: Asm2SMT
+in_menu: true
+routed_title: Asm2SMT
+sort_info: 8
+---
+**Asm2SMT** produces a symbolic representation of an AsmetaL model.<br/>
+<h3>Download</h3>
+<p>Download the tool: <a
+ href="http://svn.code.sf.net/p/asmeta/code/code/experimental/smtRepresentation/translatorToSMT/AsmToSMT.jar">AsmToSMT.jar</a></p>
+<h3>How to run<br/>
+</h3>
+To run Asm2SMT
+<pre>java -jar Asm2SMT.jar asmetalFileName.asm</pre>
+
+
+## Paper
+P. Arcaini, A. Gargantini, E. Riccobene. SMT for state-based formal methods: the ASM case study, in 6th workshop on Automated Formal Methods (AFM 2017) [doi](https://doi.org/10.29007/djdz)

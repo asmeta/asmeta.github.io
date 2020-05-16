@@ -1,0 +1,45 @@
+---
+title: Model checker
+in_menu: true
+routed_title: AsmetaSMV
+sort_info: 4
+---
+
+The **AsmetaSMV** model checker can be used to automatically verify Asmeta properties by translating AsmetaL specifications in NuSMV specifications.<br/>
+
+### Installation 
+
+The model checker can be used either embedded in eclipse or as standalone program. For the eclipse version, follow the instructions [here](./index.html#installing-asmeta-in-eclipse)
+
+The NuSMV model checker must be installed in the system and added to the system path. NuSMV can be downloaded from here: <a href="http://nusmv.fbk.eu/" target='_blank'>
+http://nusmv.fbk.eu/</a>
+
+Libraries with temporal operators can be downloaded from here: <a href="https://sourceforge.net/p/asmeta/code/HEAD/tree/asm_examples/STDL/CTLlibrary.asm?format=raw" target='_blank'>CTL library</a>, <a href="https://sourceforge.net/p/asmeta/code/HEAD/tree/asm_examples/STDL/LTLlibrary.asm?format=raw" target='_blank'>LTL library</a>
+
+### Use in eclipse
+<p>You can run the tool in two modes:</p>
+<ul>
+  <li><img src="http://svn.code.sf.net/p/asmeta/code/code/experimental/asmetasmv/asmeta.smv.ui/icons/runAsmetaSMVtranslate.gif"/> translates the AsmetaL model in NuSMV</li>
+  <li><img src="http://svn.code.sf.net/p/asmeta/code/code/experimental/asmetasmv/asmeta.smv.ui/icons/runAsmetaSMVtranslateAndExec.gif"/> translates the AsmetaL model in NuSMV and then executes the NuSMV model</li>
+</ul>
+
+Other options can be set in the preferences: Window -&gt; Preferences -&gt; Asmeta -&gt; AsmetaSMV
+
+### Download as standalone
+<p>Download the tool: <a href="http://svn.code.sf.net/p/asmeta/code/code/experimental/asmetasmv/asmeta.smv/AsmetaSMV.jar">
+AsmetaSMV.jar</a></p>
+<h3>How to run<br/>
+</h3>
+To run AsmetaSMV
+<pre>java -jar AsmetaSMV.jar [options...] file.asm
+ -debug   : set log4j level to debug
+ -en      : execute the NuSMV model after the mapping
+ -kf      : keep the NuSMV file. To be used with the -en option enabled. If the -en option is not enabled, the option -kf is enabled by default.
+ -log VAL : log4j configuration file
+ -nc      : do not add the check on integer enum
+ -ns      : do not simplify the boolean conditions in NuSMV code</pre>
+
+
+## Paper
+P. Arcaini, A. Gargantini, E. Riccobene. AsmetaSMV: A Way to Link High-Level ASM Models to Low-Level NuSMV Specifications, in 2nd International Conference on Abstract State Machines, Alloy, B and Z (ABZ 2010), Orford, QC, Canada, February 22-25, 2010 [doi](http://dx.doi.org/10.1007/978-3-642-11811-1_6)
+

@@ -1,0 +1,27 @@
+---
+title: The Abstract State Machines Metamodel
+in_menu: true
+routed_title: AsmM
+---
+<p>Our first idea have been laid down in a <a href="http://dx.doi.org/10.1007/978-3-540-24773-9_9">paper</a> presented at <a href="http://swt.informatik.uni-halle.de//ASM2004/">ASM'04</a>.
+</p>
+<p>A complete definition of the AsmM metamodel can be found
+in:</p>
+<blockquote>
+  <div align="left"> A. Gargantini, E. Riccobene, and P. Scandurra. <em>Metamodelling a Formal Method: Applying MDE to Abstract State Machines</em>. Technical Report 97, DTI Dept., University of Milan, November 2006. [<a href="http://hdl.handle.net/2434/29854">link</a>]</div>
+</blockquote>
+<p>Here you find:</p>
+<ul>
+  <li>
+    <p><strong>The AsmM Abstract Syntax </strong>(the metamodel)<br/>
+    </p>
+    <ul>
+      <li>The <a href="https://sourceforge.net/p/asmeta/code/HEAD/tree/code/stable/asmeta.emf/model/AsmM.ecore?format=raw">ecore</a> file for the AsmM<br/>
+      </li>
+      <li>(not yet in the metamodel, with some errors) The <a href="https://sourceforge.net/p/asmeta/code/HEAD/tree/code/stable/asmeta.emf/model/ocl/">OCL constraints</a> edited by <a href="https://projects.eclipse.org/projects/modeling.mdt.ocl">OCL for eclipse<br/>
+        </a></li>
+    </ul>
+  </li>
+</ul>
+<p>From the AsmM we have derived the XMI format and the Java EMF libraries.<br/>
+</p>

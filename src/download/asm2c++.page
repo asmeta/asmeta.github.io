@@ -1,0 +1,33 @@
+---
+title: Asm2C++
+in_menu: true
+routed_title: Asm2C++
+sort_info: 9
+---
+Asm2C++ is a tool for C++ code generation from Abstract State Machines. It allows the generation of C++ for the 
+
+## Papers
+
+Bonfanti, Silvia, Carissoni, Marco, Gargantini, Angelo,  and Mashkoor, Atif
+*Asm2C++: A Tool for Code Generation from Abstract State Machines to Arduino*
+in NASA Formal Methods: 9th International Symposium, NFM 2017, Moffett Field, CA, USA, May 16-18, 2017, Proceedings (Eds. Barrett, Clark and Davies, Misty and Kahsai, Temesghen) Springer International Publishing (2017): 295--301 ISBN 978-3-319-57288-8
+[download pdf](http://cs.unibg.it/gargantini/research/papers/asm2cpp_nasafm17.pdf)
+[doi](http://dx.doi.org/10.1007/978-3-319-57288-8_21)
+
+
+Silvia Bonfanti, Angelo Gargantini,  and Atif Mashkoor
+*Validation of code transformation from Abstract State Machine models to C++ code* in ICTSS 2018 - 30th International Conference on Testing Software and SystemsSpringer International Publishing (2018): 17--32 
+[download pdf](http://cs.unibg.it/gargantini/research/papers/asm2code_ictss18.pdf)
+[doi](http://dx.doi.org/10.1007/978-3-319-99927-2_2)
+								
+
+Bonfanti, Silvia, Gargantini, Angelo,  and Mashkoor, Atif
+*Generation of Behavior-Driven Development C++ Tests from Abstract State Machine Scenarios*
+in IWCFS 2018 2nd International Workshop on Cybersecurity and Functional Safety in Cyber-Physical Systems (IWCFS 2018) in conjunction
+with 8th International Conference on Model &amp; Data Engineering (MEDI 2018) Marrakesh, Morocco, 24-26 October, 2018Springer International Publishing (2018): 146--152<br />
+[download pdf](http://cs.unibg.it/gargantini/research/papers/iwcfs2018_avallatoBDD.pdf)
+[doi](http://dx.doi.org/10.1007/978-3-030-02852-7_13)
+
+## Code
+
+The source code can be found here: <https://sourceforge.net/p/asmeta/code/HEAD/tree/code/experimental/asmetal2cpp/> - the plugin will be available soon.

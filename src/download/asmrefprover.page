@@ -1,0 +1,32 @@
+---
+title: Refinement prover 
+in_menu: true
+routed_title: AsmRefProver
+sort_info: 7
+---
+
+
+The **AsmRefProver** (Asmeta Refinement correctness Prover) can be used to prove the correctness of refinement steps.<br/>
+
+### Download
+
+<p>Download the tool: <a href="http://svn.code.sf.net/p/asmeta/code/code/experimental/smtRepresentation/refinementProof/AsmRefProver.jar">AsmRefProver.jar</a></p>
+<h3>How to run<br/>
+</h3>
+To run AsmRefProver
+<pre>java -jar AsmRefProver.jar [options...] abstractModel.asm refinedModel.asm
+ -ep  : execute the proof (default: false)
+ -log : show the SMT context (default: false)
+ -sp  : save the proof (default: false)</pre>
+
+<p>The tool is based on the SMT solver Yices that can be downloaded from <a href="http://yices.csl.sri.com/old/download-yices1.shtml" target="_blank">here</a>. You have to put libyices.dll (Windows users) or libyices.so (Linux users) in the same folder of the jar file.</p>
+
+<p>Proof invariants must be specified in the model in the invariant section. Their name must start with <i>inv_invForRef</i></p>
+
+### Models
+Some models with SMT contexts generated during the proof are available at <a href="http://fmse.di.unimi.it/sw/AsmRefProverExamples.zip">AsmRefProverExamples.zip</a>
+
+Complete results regarding our experiments are available <a href="http://svn.code.sf.net/p/asmeta/code/code/experimental/smtRepresentation/refinementProof/experimentalresults">here</a>.
+
+## Paper
+P. Arcaini, A. Gargantini, E. Riccobene. SMT-based automatic proof of ASM model refinement, in 14th International Conference on Software Engineering and Formal Methods (SEFM 2016), Vienna, Austria, July 4-8, 2016 [doi](http://dx.doi.org/10.1007/978-3-319-41591-8_17)

@@ -1,0 +1,26 @@
+---
+title: Editor
+in_menu: true
+routed_title: Asmee
+sort_info: 1
+---
+A <strong>graphical front-end</strong> called Asmee (ASM Eclipse Environment) which allows to edit and manipulate AsmM models. This environment is implemented as eclipse plug-in.
+
+### Eclipse plugin
+The editor is available as eclipse plugin. Follow the instructions [here](./index.html#installing-asmeta-in-eclipse)
+
+<!--p>Download <a href="http://fmse.di.unimi.it/asmeta/download/asmee_site.zip"> asmee_site.zip</a> which contains a zipped version of the asmee update site. Unzip it and copy it in a temporary directory (for example c:\temp\asmee). Then update eclipse like in Option 1, except that in step 3 choose new Local Site and select the directory (c:\temp\asmee) where you have unzipped the asmee_site.</p-->
+
+<h2>How to use Asmee</h2>
+<p>After you have installed the Asmee plugin, you will have in eclipse the following features:</p>
+<ul>
+  <li>a wizard to <strong>create a new AsmetaL file</strong>: go to File-&gt;new File-&gt; Other -&gt; AmsetaL new File. It creates a new file. Note that the name of the asm and of the file must be the same. You probably will need also the standard library, that you can download from <a href="http://sourceforge.net/p/asmeta/code/HEAD/tree/asm_examples/STDL/StandardLibrary.asm?format=raw">StandardLibrary.asm</a>.</li>
+  <li><strong>synthax hightlighting</strong> (you can change the colors in the preferences: go to Window -&gt; Preferences -&gt; Asmeta -&gt; Asmee)</li>
+</ul>
+
+
+## License
+
+The software will be released under the <a  href="http://www.gnu.org/copyleft/gpl.html">GNU General Public License (GPL)</a> with some modifications (to allow the use of the JMIs and other libraries).<br/>
+For precise information about licensing <a href="../download/license.html">click here</a>.<br/>
+<br/>

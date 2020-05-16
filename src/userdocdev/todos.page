@@ -1,0 +1,51 @@
+---
+title: Open issues and tasks
+in_menu: false
+routed_title: Todo
+---
+
+<h4>Technologies</h4>
+<ul>
+  <li class="inwork">porting of the AsmM to EMF - DONE</li>
+  <li class="investigate">porting to Rational tools or Papyrus from Poseidon: initial investigation shows that MOF under rational is not well supported<br/>
+  </li>
+  <li class="investigate">integration of the OCL constraints with the metamodel<br/>
+  </li>
+</ul>
+<h4>AsmM</h4>
+<ul>
+  <li class="investigate">Make the link between Term and its type optional, to allow rapid prototyping without type annotations</li>
+</ul>
+<h4>AsmetaL</h4>
+<ul>
+  <li class="ok">allow the definition over concrete domains (for example domain Cluster subsetof Prod(Integer,Integer), definition a a
+function from Cluster -&gt; Integer) (0.9.2)</li>
+  <li class="investigate">put the StandardLibrary.asm in a "standard" position to allow the import without having the actual StandardLibrary in the project</li>
+</ul>
+<ul>
+</ul>
+<h4>AsmetaS<br/>
+</h4>
+<ul>
+  <li class="inwork">allow expressions like choose x in Integer with 0&lt; x to be interpreted (maybe use of constraint solvers?)<br/>
+  </li>
+  <li class="inwork">define a random environment for validation against the axiom (available in Asmee)<br/>
+  </li>
+</ul>
+<h4>Asmeta tool set</h4>
+<ul>
+  <li class="investigate">build a visual editor using the eclipse GMF/GME</li>
+</ul>
+<h4>Asmee</h4>
+<ul>
+  <li class="ok">random simulation (0.9.2)<br/>
+  </li>
+  <li class="investigate"><span style="font-weight: bold;">known bug</span>:
+if you have the C++ callisto plugin installed, the asm files are associated to the assembler editor</li>
+</ul>
+<hr/>
+<ul>
+  <li class="ok">Done, part of this release.</li>
+  <li class="inwork">Just has to be done, will be available in one of the next releases.</li>
+  <li class="investigate">Needs some investigation whether it makes sense to implement this feature or how to implement it.</li>
+</ul>

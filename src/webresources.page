@@ -1,0 +1,40 @@
+---
+title: Web resources
+in_menu: true
+---
+<body>
+<h2>Abstract State Machines</h2>
+<ul>
+  <li><strong>Abstact State Machines</strong> web site <a href="http://www.eecs.umich.edu/gasm/">http://www.eecs.umich.edu/gasm/</a><br/>
+  </li>
+  <li>E. Boerger and R. Staerk. <em>Abstract State Machines: A Method for High-Level System Design and Analysis</em>. Springer Verlag, 2003.<br/>
+    <div align="left"> <a href="http://www.di.unipi.it/~boerger/AsmBook/">http://www.di.unipi.it/~boerger/AsmBook/</a></div>
+  </li>
+  <li>The <a href="http://rotor.di.unipi.it/AsmCenter/">ASM research
+center</a></li>
+</ul>
+<h3>Other ASM tools</h3>
+<ul>
+  <li><a href="http://www.coreasm.org/">CoreAsm</a>: executable ASM developed at Software Technology Lab, Simon Fraser University</li>
+  <li><a href="http://research.microsoft.com/en-us/projects/asml/">AsmL</a>: the Abstract State Machine Language embedded in .NET, developed by Microsoft Research FSE group</li>
+  <li>for other tools (some are no longer maintened) see the Asm web site <a href="http://www.eecs.umich.edu/gasm/">http://www.eecs.umich.edu/gasm/</a></li>
+</ul>
+<center>
+<center>
+<div align="left">
+<h3><strong>Model-driven engineering</strong></h3>
+<ul>
+  <li><div align="left"> <strong>Model-driven Engineering</strong> from Wikipedia <a href="http://en.wikipedia.org/wiki/Model_Driven_Engineering">  http://en.wikipedia.org/wiki/Model_Driven_Engineering</a></div></li>
+</ul>
+<h3><strong>OMG's standards and tools</strong></h3>
+</div>
+<ul>
+  <li><div align="left"> OMG, The <strong>Unified Modeling Language</strong> (<strong>UML</strong>). <a href="http://www.uml.org/">http://www.uml.org/</a>.<br/></div></li>
+  <li><div align="left"> OMG, The <strong>Meta Object Facility</strong> (<strong>MOF</strong>) Specification, document formal/2002-04-03, version 1.4 <a href="http://www.omg.org/technology/documents/modeling_spec_catalog.htm#MOF">http://www.omg.org/technology/documents/modeling_spec_catalog.htm#MOF</a><br/></div></li>
+  <li><div align="left"> OMG, XML Metadata Interchange (XMI) Specification, v1.2. <a href="http://www.omg.org/technology/documents/modeling_spec_catalog.htm#XMI">http://www.omg.org/technology/documents/modeling_spec_catalog.htm#XMI</a><br/></div></li>
+  <li><div align="left"><strong>Metadata Repository</strong> (<strong>MDR</strong>) Project Home <a href="http://mdr.netbeans.org/">http://mdr.netbeans.org/</a></div></li>
+  <li style="text-align: left;"><span style="font-weight: bold;">EMF</span> Eclipse modeling framework <a href="http://www.eclipse.org/modeling/emf/">http://www.eclipse.org/modeling/emf/</a><br/></li>
+</ul>
+</center>
+</center>
+</body>

@@ -1,0 +1,13 @@
+---
+title: Support
+in_menu: true
+---
+<body>
+<p>The Asmeta is a reaserch project: we try to do our best, but this may be not enough for you. If you need some help carefully read the documentation, see the help forum, or contact <a href="people.html">us</a>.
+</p>
+<h2>User Support</h2>
+<p> If the documentation does not answer your question please post your issue in the <a href="http://sourceforge.net/p/asmeta/discussion/">help forum</a>.
+</p>
+<h2>Bugs and Feature Requests</h2>
+<p> Always make sure you have installed the latest version. If you encountered a bug in the latest Asmeta toolset please report it to the <a href="http://sourceforge.net/p/asmeta/bugs/">bug tracker</a>. Use this tool also for <a href="http://sourceforge.net/p/asmeta/bugs/">feature requests</a>.</p>
+</body>

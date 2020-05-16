@@ -1,0 +1,44 @@
+---
+title: Model advisor
+in_menu: true
+routed_title: AsmetaMA
+sort_info: 5
+---
+**AsmetaMA** (Asmeta Model Advisor) can be used to check for common defects of AsmetaL models.<br/>
+
+### Installation 
+
+The model advisor can be used either embedded in eclipse or as standalone program. For the eclipse version, follow the instructions [here](./index.html#installing-asmeta-in-eclipse)
+
+The NuSMV model checker must be installed in the system and added to the system path. NuSMV can be downloaded from here: <a href="http://nusmv.fbk.eu/" target='_blank'>
+http://nusmv.fbk.eu/</a>
+
+### Use in eclipse
+<p>In order to run the model advisor you have:</p>
+<ul>
+  <li>Select the desired metaproperties in Window -&gt; Preferences -&gt; Asmeta -&gt; AsmetaMA</li>
+  <li>Run the tool from the toolbar <img src="http://svn.code.sf.net/p/asmeta/code/code/experimental/asmetamodeladvisor/asmeta.modeladvisor.ui/icons/runAsmetaMA.gif"/> </li>
+</ul>
+
+
+### Download as standalone
+<p>Download the tool: <a
+ href="http://svn.code.sf.net/p/asmeta/code/code/experimental/asmetamodeladvisor/asmeta.modeladvisor/AsmetaMA.jar">
+AsmetaMA.jar</a></p>
+<h3>How to run<br/>
+</h3>
+To run AsmetaMA
+<pre>java -jar AsmetaMA.jar [options...] asmetalFileName.asm
+ -kf    : keep the NuSMV file.
+ -mp1   : No inconsistent update is ever performed
+ -mp2   : Every conditional rule must be complete
+ -mp3   : Every rule can eventually fire
+ -mp4   : No assignment is always trivial
+ -mp5   : For every domain element e there exists a location which has value e
+ -mp6   : Every controlled function can take any value in its co-domain
+ -mp7   : Every controlled location is updated and every location is read
+ -mpAll : Execute all the metaproperties</pre>
+
+
+## Paper
+P. Arcaini, A. Gargantini, E. Riccobene. Automatic review of Abstract State Machines by Meta Property Verification, in 2nd NASA Formal Methods Symposium (NFM 2010) [link](http://shemesh.larc.nasa.gov/NFM2010/papers/nfm2010_4_13.pdf)

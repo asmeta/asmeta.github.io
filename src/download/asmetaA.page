@@ -1,0 +1,23 @@
+---
+title: Animator
+in_menu: true
+routed_title: AsmetaA
+sort_info: 4
+---
+**AsmetaA** (Asmeta Animator) can be used to simulate in graphical way AsmetaL models.<br/>
+
+### Installation 
+
+The animator works in eclipse, to install it, follow the instructions [here](./index.html#installing-asmeta-in-eclipse)
+
+### Use in eclipse
+<p>In order to animate the models you have:</p>
+<ul>
+  <li>TODO</li>
+  <li>Run the tool from the toolbar <img src="http://svn.code.sf.net/p/asmeta/code/code/experimental/asmetamodeladvisor/asmeta.modeladvisor.ui/icons/runAsmetaMA.gif"/> </li>
+</ul>
+
+## Paper
+Bonfanti, Silvia, Gargantini, Angelo, and Mashkoor, Atif
+AsmetaA: Animator for Abstract State Machines
+in Abstract State Machines, Alloy, B, TLA, VDM, and Z, 6th International Conference, ABZ 2018, Southampton, UK, June 5--8, 2018, Proceedings (2018)[link](http://cs.unibg.it/gargantini/research/papers/abz2018_Animator.pdf)

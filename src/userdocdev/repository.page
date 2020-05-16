@@ -1,0 +1,23 @@
+---
+title: Source repository
+in_menu: true
+---
+
+<body>
+<p> The source base of Asmeta (including the documentation and the web site) is maintained in a Subversion repository at SourceForge. The repository's URL to checkout asmeta repo from svn is
+</p>
+<p><code>https://svn.code.sf.net/p/asmeta/code</code></p>
+
+For instance, by using tortoisesvn, you can checkout the repo in this way:<br/>
+
+<img src="checkout.png"/> 
+
+
+<p>You might also <a href="http://sourceforge.net/p/asmeta/code/HEAD/tree/">browse the Subversion repository</a> online.
+</p>
+<h3>Repository Organisation</h3>
+<p>The file <a href="http://sourceforge.net/p/asmeta/code/HEAD/tree/readme.txt">http://sourceforge.net/p/asmeta/code/HEAD/tree/readme.txt</a> describes the organization of the repository.<br/>
+</p>
+<h3>Working with the Asmeta sources</h3>
+The better way is to use eclipse and checkout the projects from the svn.
+</body>

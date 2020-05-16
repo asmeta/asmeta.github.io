@@ -1,0 +1,22 @@
+---
+title: Asmeta language
+in_menu: true
+routed_title: AsmetaL
+---
+AsmetaL is the language we use for the ASMs.
+AsmetaL has been derived from the Asmeta metamodel following the process explained in the 3M4MDA paper (look <a href="../papers.html#3M4MDA">here</a>)
+
+You can download:
+
+<!-- 
+The <a href="http://fmse.di.unimi.it/asmeta/download/AsmetaL_EBNF.html">EBNF</a> grammar for the AsmM textual notation. It has been developed by means of the <a href="https://javacc.dev.java.net/">Sun's Java Compiler Compiler (JavaCC)</a>
+* A <a href="http://fmse.di.unimi.it/asmeta/download/AsmetaL_quickguide.html">quick guide</a> of the concrete notation
+* A <a href="http://fmse.di.unimi.it/asmeta/download/AsmetaL_guide.pdf">more complete guide about the language</a>
+* several <a href="http://fmse.di.unimi.it/asmeta/download/examples.zip">examples</a> of ASM specs (ZIP archive) - mono agents and multi agents<br/>
+-->
+
+* The [EBNF](/material/AsmetaL_EBNF.html) grammar for the AsmM textual notation. It has been developed by means of the [Java Compiler Compiler (JavaCC)](https://javacc.dev.java.net/)
+* A [quick guide](/material/AsmetaL_quickguide.html) of the concrete notation
+* A [more complete guide about the language](/material/AsmetaL_guide.pdf)
+* Several examples of ASM specifications (mono agent and multi agents) can be found under svn [here](https://sourceforge.net/p/asmeta/code/HEAD/tree/asm_examples/) 
+* **The AsmM Standard Library** A library of predefined ASM domains and functions: <a  href="https://sourceforge.net/p/asmeta/code/HEAD/tree/asm_examples/STDL/StandardLibrary.asm">StandardLibrary.asm</a> (you need this)

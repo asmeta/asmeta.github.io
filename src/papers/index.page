@@ -1,0 +1,199 @@
+---
+title: Our papers
+in_menu: true
+routed_title: Papers
+---
+We are actively working on Asmeta. See our personal web pages for a complete list of publication regarding Asmeta and to download the papers.  
+Other [people](others.html) are working with Asmeta as well.  
+
+### 2019
+
+* P. Arcaini, S. Bonfanti, A. Gargantini, E. Riccobene, P. Scandurra<br/>
+*Addressing Usability in a Formal Development Environment*<br/>
+in Workshop on Practical Formal Verification for Software Dependability (AFFORD 2019) - To appear
+
+* P. Arcaini, E. Riccobene<br/>
+*Automatic Refinement of ASM Abstract Test Cases*<br/>
+in 15th Workshop on Advances in Model Based Testing (A-MOST 2019)
+
+### 2018
+
+* S. Bonfanti, A. Gargantini, A. Mashkoor<br/>
+*Generation of Behavior-Driven Development C++ Tests from Abstract State Machine Scenarios*<br/>
+in 2nd International Workshop on Cybersecurity and Functional Safety in Cyber-Physical Systems (IWCFS 2018)
+
+* S. Bonfanti, A. Gargantini, A. Mashkoor<br/>
+*Validation of code transformation from Abstract State Machine models to C++ code*<br/>
+in 30th International Conference on Testing Software and Systems (ICTSS 2018)
+
+* P. Arcaini, R. Melioli, E. Riccobene<br/>
+*AsmetaF: a flattener for the ASMETA framework*<br/>
+in 4th Workshop on Formal Integrated Development Environment (F-IDE 2018), Oxford, UK, July 14, 2018
+
+* S. Bonfanti, A. Gargantini, A. Mashkoor<br/>
+*Generation of C++ Unit Tests from Abstract State Machines Specifications*<br/>
+in 14th Workshop on Advances in Model Based Testing (A-MOST) (2018)
+
+* S. Bonfanti, A. Gargantini, A. Mashkoor<br/>
+*AsmetaA: Animator for Abstract State Machines*<br/>
+in Abstract State Machines, Alloy, B, TLA, VDM, and Z, 6th International Conference, ABZ 2018, Southampton, UK, June 5-8, 2018, Proceedings (2018)
+
+### 2017
+
+* P. Arcaini, S. Bonfanti, A. Gargantini, A. Mashkoor, E. Riccobene<br/>
+*Integrating formal methods into medical software development: The ASM approach*<br/>
+In Science of Computer Programming, 2017
+
+* P. Arcaini, A. Gargantini, E. Riccobene<br/>
+*SMT for state-based formal methods: the ASM case study*<br/>
+in 6th workshop on Automated Formal Methods (AFM 2017)
+
+* S. Bonfanti, M. Carissoni, A. Gargantini, A. Mashkoor<br/>
+*Asm2C++: A Tool for Code Generation from Abstract State Machines to Arduino*<br/>
+in 9th NASA Formal Methods Symposium (NFM 2017)
+
+### 2016
+
+* P. Arcaini, S. Bonfanti, A. Gargantini, E. Riccobene<br/>
+*How to Assure Correctness and Safety of Medical Software: The Hemodialysis Machine Case Study*<br/>
+in Abstract State Machines, Alloy, B, TLA, VDM, and Z: 5th International Conference, ABZ 2016, Linz, Austria, May 23-27, 2016, Springer International Publishing (2016): 344--359 ISBN 978-3-319-33600-8
+
+* P. Arcaini, A. Gargantini, E. Riccobene<br/>
+*SMT-based automatic proof of ASM model refinement*<br/>
+in SEFM 2016: International Conference on Software Engineering and Formal Methods (2016)
+
+* P. Arcaini, S. Bonfanti, A. Gargantini, E. Riccobene<br/>
+*Visual notation and patterns for Abstract State Machines*<br/>
+in 3rd edition of the Human-Oriented Formal Methods (HOFM) workshop (2016)
+
+### 2015
+
+* P. Arcaini, S. Bonfanti, A. Gargantini, A. Mashkoor, E. Riccobene<br/>
+*Formal validation and verification of a medical software critical component*<br/>
+in Formal Methods and Models for Codesign (MEMOCODE), 2015 ACM/IEEE International Conference on (2015): 80--89
+
+
+### 2014
+
+#### applying ASM to model the case study of ABZ 2014
+
+* P. Arcaini, A. Gargantini, E. Riccobene<br/>
+*Rigorous development process of a safety-critical system: from ASM models to Java code*<br/>
+in International Journal on Software Tools for Technology Transfer 2015 DOI: 10.1007/s10009-015-0394-x
+
+* P. Arcaini, A. Gargantini, E. Riccobene<br/>
+*Modeling and Analyzing Using ASMs: The Landing Gear System Case Study*<br/>
+in ABZ 2014: The Landing Gear Case Study, Springer International Publishing, Communications in Computer and Information Science, vol. 433 (2014): 36-51 ISBN 978-3-319-07511-2
+
+* P. Arcaini, A. Gargantini, E. Riccobene<br/>
+*Offline Model-Based Testing and Runtime Monitoring of the Sensor Voting Module*<br/>
+in ABZ 2014: The Landing Gear Case Study, Springer International Publishing, Communications in Computer and Information Science, vol. 433 (2014): 95-109 ISBN 978-3-319-07511-2
+
+
+#### test generation for a class of decomposable ASMs
+
+* P. Arcaini, A. Gargantini<br/>
+*Test generation for sequential nets of abstract state machines with information passing*<br/>
+in Science of Computer Programming, Elsevier, vol. 94, Part 2, n. 0 (2014): 93 - 108
+
+
+
+### 2013
+
+#### test generation and runtime monitoring when an ASM is nondeterministic
+
+* P. Arcaini, A. Gargantini, E. Riccobene<br/>
+*Combining Model-Based Testing and Runtime Monitoring for Program Testing in the Presence of Nondeterminism*<br/>
+in The 9th Workshop on Advances in Model Based Testing (A-MOST 2013) colocated with ICSTIEEE Computer Society, ICSTW '13 (2013): 178-187 ISBN 978-0-7695-4993-4
+
+### 2012
+
+#### test generation using Asmeta 
+
+* P. Arcaini, F. Bolis, A. Gargantini<br/>
+*Test Generation for Sequential Nets of Abstract State Machines*<br/>
+in Abstract State Machines, Alloy, B, VDM, and Z, Springer Berlin / Heidelberg, LNCS-Lecture Notes in Computer Science, vol. 7316 (2012): 36-50 ISBN 978-3-642-30884-0
+
+#### MB testing of web applications using ASMs
+
+* F. Bolis, A. Gargantini, M. Guarnieri, E. Magri, L. Musto<br/>
+*Model-Driven Testing for Web Applications using Abstract State Machines*<br/>
+in Model-Driven Web Engineering workshop (MDWE 2012) - workshop of the 12th International Conference on Web Engineering ICWE 2012 (2012)
+
+### 2011
+
+#### runtime verification using Asmeta
+
+* P. Arcaini, A. Gargantini, E. Riccobene<br/>
+*CoMA: Conformance Monitoring of Java programs by Abstract State Machines*<br/>
+in 2nd International Conference on RUNTIME VERIFICATION RV 2011, September 27 - September 30, 2011, San Francisco, California (2011)
+
+#### a language and an engine for service oriented components based on Asmeta
+
+* F. Albani, E. Riccobene, P. Scandurra<br/>
+*A modeling and executable language for designing and prototyping service-oriented applications*<br/>
+in EUROMICRO Conf. on Software Engineering and Advanced Applications (SEAA 2011), 2011.
+
+### 2010
+
+#### property verification for Asmeta  
+
+<ul>
+	<li>P. Arcaini, A. Gargantini, E. Riccobene<br/>
+	<i>AsmetaSMV: A Way to Link High-Level ASM Models to Low-Level NuSMV Specifications</i><br/>
+	in Abstract State Machines, Alloy, B and Z, Second International Conference, ABZ 2010, Orford, QC, Canada, February 22-25, 2010. Springer, vol. 5977 (2010): 61-74</li>
+</ul>
+
+#### model advisor  for Asmeta
+<ul>
+	<li>P. Arcaini, A. Gargantini, E. Riccobene<br/>
+	<i>Automatic review of Abstract State Machines by Meta Property Verification</i><br/>
+	in Second NASA Formal Methods Symposium, NFM 2010 (2010)</li>
+</ul>
+
+
+### 2009 and older
+
+<h4>About the Asmeta framework in general</h4>
+<ul>
+	<li>A. Gargantini, E. Riccobene, P. Scandurra<i><br/>
+	Model-driven Language Engineering: the ASMETA case study</i><br/>
+	in Third International Conference on Software Engineering Advances (ICSEA), October 26-31, 2008 - Sliema, Malta (2008)</li>
+</ul>
+<h4>About metamodelling ASMs</h4>
+<ul>
+	<li>A. Gargantini, E. Riccobene, P. Scandurra<i><br/>
+	Ten reasons to metamodel ASMs</i><br/>
+	in Rigorous Methods for Software Construction and Analysis - Papers Dedicated to Egon B&ouml;rger on the Occasion of His 60th Birthday (Eds. J. R. Abrial and U. Gl&auml;sser) Springer-Verlag ,vol. 5115 (2008)</li>
+	<li>A. Gargantini, E. Riccobene, P. Scandurra<i><br/>
+	Metamodelling a Formal Method: Applying MDE to Abstract State Machines. Technical Report n. 97</i><br/>
+	in Technical report of DTI Dept., University of Milan (2006)</li>
+</ul>
+<h4>About the AsmetaL language and its derivation from the metamodel</h4>
+<ul>
+	<li>A. Gargantini, C. Genovese, T. Genovese, E. Riccobene, P. Scandurra<i><br/>
+	A Concrete Syntax derived from the Abstract State Machine Metamodel</i><br/>
+	in Proc. of ASM 2005 12th International Workshop on Abstract State Machines March 8-11, 2005, Paris, France (2005)</li>
+</ul>
+<ul>
+	<li>A. Gargantini, E. Riccobene, P. Scandurra<i><br/>
+	Deriving a textual notation from a metamodel: an experience on bridging Modelware and Grammarware</i><br/>
+	in 3M4MDA 2006 - European Workshop on Milestones, Models and Mappings for Model-Driven Architecture - European Conference on Model Driven Architecture, in Bilbao, Spain from July 10th-13th 2006. (2006)</li>
+</ul>
+<h4>About the simulator<br/>
+</h4>
+<ul>
+	<li>A. Gargantini, E. Riccobene, P. Scandurra<br/>
+	<i>A Metamodel-based Language and a Simulation Engine for Abstract State Machines</i><br/>
+	in Journal of Universal Computer Science (JUCS) (2008)</li>
+	<li>A. Gargantini, E. Riccobene, P. Scandurra<i><br/>
+	A Metamodel-based Simulator for ASMs</i><br/>
+	in The 14th International ASM Workshop, Grimstad, Norwegen, May 2008 (Eds. Andreas Prinz) (2007)</li>
+</ul>
+<h4>About the validation language<br/>
+</h4>
+<ul>
+	<li>A. Carioni, A. Gargantini, E. Riccobene, P. Scandurra<i><br/>
+	A scenario-based validation language for ASMs</i><br/>
+	in ABZ Conference, September 16-18, 2008, London, UK (2008)</li>
+</ul>

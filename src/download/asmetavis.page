@@ -1,0 +1,23 @@
+---
+title: Visualizer
+in_menu: true
+routed_title: AsmetaVis
+sort_info: 6
+---
+
+**AsmetaVis** (Asmeta Visualizer) can be used to visualize AsmetaL specifications.
+
+### Installation
+
+The visualizer is integrated in eclipse. For installation, follow the instructions [here](./index.html#installing-asmeta-in-eclipse)
+
+### Use
+
+<p>You can execute two kinds of visualizations:</p>
+<ul>
+  <li><img src="http://svn.code.sf.net/p/asmeta/code/code/experimental/asmeta.visualizer/asmeta.visualizer.plugin/icons/basicVisualizer.gif"/> basic</li>
+  <li><img src="http://svn.code.sf.net/p/asmeta/code/code/experimental/asmeta.visualizer/asmeta.visualizer.plugin/icons/semanticVisualizer.gif"/> semantic</li>
+</ul>
+
+## Paper
+P. Arcaini, S. Bonfanti, A. Gargantini, E. Riccobene. Visual notation and patterns for Abstract State Machines, in 3rd workshop on Human-Oriented Formal Methods (HOFM 2016), Vienna, Austria, July 4, 2016 [doi](http://dx.doi.org/10.1007/978-3-319-50230-4_12)

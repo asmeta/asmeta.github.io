@@ -1,0 +1,51 @@
+---
+title: Simulator
+in_menu: true
+routed_title: AsmetaS
+sort_info: 2
+---
+
+An **ASM simulator** to make AsmM models executable. Essentially, it is an interpreter which navigates through the MOF repository where ASM models are instantiated (as instances of the AsmM metamodel) to make its computations.
+
+### Installation 
+
+The simulator can be used either embedded in eclipse or as standalone program. For the eclipse version, follow the instructions [here](./index.html#installing-asmeta-in-eclipse)
+
+### Use in eclipse
+
+<p>In eclipse you can perform the following actions to simulate an AsmetaL specification:</p>
+<ul>
+  <li><img src="../images/check.gif"/> <strong>check</strong> your AsmetaL specification</li>
+  <!--li><img src="../images/run_uempty.gif"/> run <strong>until empty</strong></li-->
+  <li><img src="../images/run_asm_tool.gif"/> run step by step interactively</li>
+  <li><img src="../images/run_rnd.gif"/> run taking random inputs</li>
+  <!--li><img src="../images/run_utrivial.gif"/> run <strong>until the update set is trivial</strong></li-->
+  <li>press <img src="../images/terminate.gif"/> in the console to stop the simulation (press twice to abort)</li>
+</ul>
+
+<p>Some execution options can be selected in the preferences (Window -&gt; Preferences -&gt; Asmeta -&gt; Asmee):</p>
+<ul>
+  <li>check the invariants during the simulation</li>
+  <li>stop the simulation when the update set is empty</li>
+  <li>stop the simulation when the update set is trivial</li>
+</ul>
+
+
+### Download as standalone
+
+<p>Download the interpreter: <a href="http://svn.code.sf.net/p/asmeta/code/code/stable/simulator/asmeta.simulator.cli/AsmetaS.jar">
+AsmetaS.jar</a></p>
+<h3>How to run<br/>
+</h3>
+To run the ASM simulator <span style="font-weight: bold;">- in brief</span>
+<pre>java -jar AsmetaS.jar &lt;filename&gt;</pre>
+<h4>Usage&nbsp; with options<br/>
+</h4>
+To run the simulator with the asm file filename:
+<pre>java -jar AsmetaS.jar &lt;filename&gt;</pre>
+To simulate with a fixed number of steps (for example 3):
+<pre>java -jar AsmetaS.jar -n 3 &lt;filename&gt;</pre>
+To simulate until the update set becomes empty:
+<pre>java -jar AsmetaS.jar -ne &lt;filename&gt;</pre>
+
+For a brief guide about how to use and extend AsmetaS, see [AsmetaS_quickguide_it.pdf](/material/AsmetaS_quickguide_it.pdf) (only in Italian)

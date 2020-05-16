@@ -1,0 +1,28 @@
+---
+title: Papers written by others 
+in_menu: true
+---
+
+### Other people using Asmeta
+
+* Farah Al-Shareefi, Alexei Lisitsa, Clare Dixon. *Clarification of Ambiguity for the Simple Authentication and Security Layer* In  International Conference on Abstract State Machines, Alloy, B, TLA, VDM, and Z, Lecture Notes in Computer Science, vol 10817. Springer, 2018 [link](https://link.springer.com/chapter/10.1007/978-3-319-91271-4_13)
+
+* Farah Al-Shareefi, Alexei Lisitsa, Clare Dixon. *Abstract State Machines and System Theoretic Process Analysis for Safety-Critical Systems*. In Proceedings of Formal Methods: Foundations and Applications (SBMF 2017). [doi](https://doi.org/10.1007/978-3-319-70848-5_3)
+
+* Fabian Benduhn, Thomas Th&uuml;m, Ina Schaefer, Gunter Saake. *Modularization of Refinement Steps for Agile Formal Methods*. In Proceedings of Formal Methods and Software Engineering (ICFEM 2017). [doi](https://doi.org/10.1007/978-3-319-68690-5_2)
+
+* Gianluca Bevilacqua and Alessandro Bianchi, University of Bari, Italy.<br/>For his master thesis, Gianluca (with his advisor Alessandro) is using ASMETA for the implementation of the BN-AODV routing protocol. As a by-product of his work, he defined a User Defined Syntax of AsmetaL for the <a href="https://notepad-plus-plus.org/"  target="_blank">Notepad++ editor</a>; you can download it from <a href="../download/AsmetaLnotepad.xml" download>here</a> in case you need to simply visualise AsmetaL specifications outside the ASMETA framework.
+
+* Roxana-Maria Holom from SCCH used ASMETA in her PhD thesis for modeling and analyzing cloud systems:<br/>
+P. Arcaini, R.M. Holom, E. Riccobene. *ASM-based formal design of an adaptivity component for a Cloud system* in Formal Aspects of Computing, 2016 [doi](http://dx.doi.org/10.1007/s00165-016-0371-5)<br/>
+P. Arcaini, R.M. Holom, E. Riccobene. *Modeling and Formal Analysis of a Client-Server Application for Cloud Services* in Proceedings of WS-FM 2014 [doi](http://dx.doi.org/10.1007/978-3-319-33612-1_4)
+
+* Osama Alkrarha, and Jameleddine Hassine. *MuAsmetaL: An Experimental Mutation System for AsmetaL*. In Proceedings of the 12th International Conference on Information Technology - New Generations (ITNG '15). [doi](http://dx.doi.org/10.1109/ITNG.2015.74)
+
+* Vahid Rafe, and Saeed Doostali. *ASM2Bogor: An approach for verification of models specified through Asmeta language*. Journal of Visual Languages &amp; Computing, 23(5), 2012, pp. 287-298. [doi](http://dx.doi.org/10.1016/j.jvlc.2012.05.002)
+
+* Saeed Doostali. *An Efficient Solution for Model Checking Abstract State Machine Using Bogor*. arXiv:1404.2155 [link](http://arxiv.org/abs/1404.2155)
+
+* Yahya Asadollahia, Vahid Rafe, Samaneh Asadollahic and Somayeh Assadollahia. *A formal framework to model and validate event-based software architecture*, Procedia Computer Science, Volume 3, 2011, Pages 961-966 World Conference on Information Technology, [doi](http://dx.doi.org/10.1016/j.procs.2010.12.157)
+
+* Clayton Vieira Fraga Filho, M.Sc. Software Engineering Researcher, Brazil. Federal University of Vi&ccedil;osa<br/>Clayton is using (and improving) AsmetaL/AsmetaS with software process simulation models.

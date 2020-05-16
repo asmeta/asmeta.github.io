@@ -1,0 +1,53 @@
+---
+title: Asmeta Tools
+in_menu: false
+routed_title: Asmeta toolset
+sort_info: 0005
+---
+We have developed and are distributing the following (stable) tools
+
+* <a href="asmee.html">Asmee:</a> an editor for ASMs written in the AsmetaL language
+* <a href="asmetalc.html">AsmetaLc:</a> a compiler/parser for AsmetaL models
+* <a href="asmetas.html">AsmetaS:</a> a simulator
+* <a href="asmetav.html">AsmetaV</a>: a scenario-based validator
+* <a href="asmetaA.html">AsmetaA:</a> an execution animator
+* <a href="asmetasmv.html">AsmetaSMV</a>: a model checker based on NuSMV
+* <a href="asmetama.html">AsmetaMA</a>: a model advisor
+* <a href="asmetavis.html">AsmetaVis</a>: a graphical visualizer of AsmetaL models
+* <a href="asmrefprover.html">AsmetaRefProver</a>: a prover of refinement correctness
+* <a href="asm2SMT.html">Asm2SMT</a>: a translator from AsmetaL models to Yices logical contexts
+* <a href="asm2c++.html">Asm2C++</a>: a code generator
+
+
+Some tools are provided both as eclipse plugins and standalone jars that can be executed at command line. Some are only available as jar files.
+
+## Installing ASMETA in eclipse
+
+Some ASMETA tools are integrated in eclipse. The update site is <b>http://svn.code.sf.net/p/asmeta/code/code/stable/asmeta_update/</b>.
+Perform the following steps to install an Asmeta tool from the update site:
+<p><b>1. From your Eclipse menu select <i>Help</i> <i>Software Updates</i>
+<i>Find and Install...</i></b></p>
+<p><b>2. Check <i>Search for new features</i> and press <i>Next</i>.</b>
+</p>
+<p><b>3. Press <i>New Remote Site...</i> and enter
+http://svn.code.sf.net/p/asmeta/code/code/stable/asmeta_update/ for the update site URL</b></p>
+<p><b>4. Press <i>Finish</i>.</b></p>
+<p><b>5. Select the desired tool(s).</b></p>
+<p><b>6. Follow the steps in the installation wizard.</b></p>
+
+
+### License
+
+Asmeta is released under a GPL-like [license](license.html).
+
+### Experimental tools
+
+We have been working on:
+
+* the AsmetaRE: to generate executable ASMs from Use Case models. 
+* the SCA-ASM: an executable modeling language and an engine for service oriented applications. See our paper at EUROMICRO SEAA 2011
+* a graphical editor for Asmeta specs based on GMF
+
+### ATGT: test generator
+The ATGT test generator now supports structural based testing, fault based testing and combinatorial testing.
+See the <a href="http://cs.unibg.it/gargantini/software/atgt">ATGT</a> page for further information.

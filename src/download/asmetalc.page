@@ -1,0 +1,22 @@
+---
+title: Compiler
+in_menu: false
+routed_title: Compiler
+---
+The ***AsmetaL compiler/parser*** processes the ASM models written in the AsmetaL concrete syntax, checks for their
+consistency w.r.t. the OCL constraints of the metamodel, and translates
+information about concrete models into AsmM instances in a EMF model.<br/>
+<h3>Download</h3> 
+<p>Download the parser: <a href="http://svn.code.sf.net/p/asmeta/code/code/stable/parser_cli/AsmetaLc.jar">
+AsmetaLc.jar</a></p>
+<h3>How to run <br/>
+</h3>
+<p>To run the parser - in <strong>brief</strong></p>
+<pre>java -jar AsmetaLc.jar &lt;filename&gt;</pre>
+Other commands:<br/>
+<pre>java -jar AsmetaLc [-xmi] [-log &lt;log4j file&gt;] &lt;model.asm&gt;</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -xmi: generate the XMI output format.</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -log: generate debug info.</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;log4j file&gt;: configuration file of the logger</pre>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;model.asm&gt;: path name of the ASM spec.</pre>
+<br/>

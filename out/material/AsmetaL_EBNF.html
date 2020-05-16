@@ -1,0 +1,1076 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<TITLE>EBNF for AsmetaL</TITLE>
+</HEAD>
+<BODY>
+	<H1 ALIGN=CENTER>AsmetaL EBNF</H1>
+	<H2 ALIGN=CENTER>TOKENS</H2>
+	<TABLE>
+		<!-- Special token -->
+		<TR>
+			<TD><PRE>
+/***************************************************************
+-------------------------   TOKENS   ---------------------------
+***************************************************************/</PRE></TD>
+		</TR>
+		<!-- Token -->
+		<TR>
+			<TD><PRE>
+&lt;DEFAULT,GENERIC_ID,MODULE_ID&gt; SKIP : {
+" "
+| "\r"
+| "\t"
+| "\n"
+| &lt;"//" (~["\n","\r"])* ("\n" | "\r" | "\r\n")&gt;
+| &lt;"/*" (~["*"])* "*" ("*" | ~["*","/"] (~["*"])* "*")* "/"&gt;
+}
+
+   </PRE></TD>
+		</TR>
+		<!-- Special token -->
+		<TR>
+			<TD><PRE>
+/* RESERVED WORDS */</PRE></TD>
+		</TR>
+		<!-- Token -->
+		<TR>
+			<TD><PRE>
+&lt;DEFAULT&gt; TOKEN : {
+&lt;ASM: "asm"&gt; : GENERIC_ID
+| &lt;MODULE: "module"&gt; : GENERIC_ID
+| &lt;ASYNCR: "asyncr"&gt;
+| &lt;IMPORT: "import"&gt; : MODULE_ID
+| &lt;EXPORT: "export"&gt;
+| &lt;SIGNATURE: "signature"&gt;
+| &lt;INIT: "init"&gt; : GENERIC_ID
+| &lt;Default: "default"&gt;
+| &lt;AGENT: "agent"&gt;
+| &lt;INVARIANT: "invariant"&gt;
+| &lt;OVER: "over"&gt;
+| &lt;DEFINITIONS: "definitions"&gt;
+| &lt;FUNCTION: "function"&gt;
+| &lt;STATIC: "static"&gt;
+| &lt;DYNAMIC: "dynamic"&gt;
+| &lt;DERIVED: "derived"&gt;
+| &lt;MONITORED: "monitored"&gt;
+| &lt;CONTROLLED: "controlled"&gt;
+| &lt;SHARED: "shared"&gt;
+| &lt;OUT: "out"&gt;
+| &lt;DOMAIN: "domain"&gt;
+| &lt;ANYDOMAIN: "anydomain"&gt;
+| &lt;BASIC: "basic"&gt;
+| &lt;ABSTRACT: "abstract"&gt;
+| &lt;ENUM: "enum"&gt;
+| &lt;SUBSETOF: "subsetof"&gt;
+| &lt;PROD: "Prod"&gt;
+| &lt;SEQ: "Seq"&gt;
+| &lt;POWERSET: "Powerset"&gt;
+| &lt;BAG: "Bag"&gt;
+| &lt;MAP: "Map"&gt;
+| &lt;RULEDOM: "Rule"&gt;
+| &lt;TRUE: "true"&gt;
+| &lt;FALSE: "false"&gt;
+| &lt;UNDEF: "undef"&gt;
+| &lt;IM_PART: "i"&gt;
+| &lt;IF: "if"&gt;
+| &lt;THEN: "then"&gt;
+| &lt;ELSE: "else"&gt;
+| &lt;ENDIF: "endif"&gt;
+| &lt;SWITCH: "switch"&gt;
+| &lt;END_SWITCH: "endswitch"&gt;
+| &lt;CASE: "case"&gt;
+| &lt;OTHERWISE: "otherwise"&gt;
+| &lt;ENDCASE: "endcase"&gt;
+| &lt;LET: "let"&gt;
+| &lt;ENDLET: "endlet"&gt;
+| &lt;EXIST: "exist"&gt;
+| &lt;UNIQUE: "unique"&gt;
+| &lt;WITH: "with"&gt;
+| &lt;FORALL: "forall"&gt;
+| &lt;Skip: "skip"&gt;
+| &lt;RULE: "rule"&gt;
+| &lt;MACRO: "macro"&gt;
+| &lt;TURBO: "turbo"&gt;
+| &lt;MAIN: "main"&gt;
+| &lt;PAR: "par"&gt;
+| &lt;ENDPAR: "endpar"&gt;
+| &lt;CHOOSE: "choose"&gt;
+| &lt;DO: "do"&gt;
+| &lt;IFNONE: "ifnone"&gt;
+| &lt;EXTEND: "extend"&gt;
+| &lt;seq: "seq"&gt;
+| &lt;ENDSEQ: "endseq"&gt;
+| &lt;ITERATE: "iterate"&gt;
+| &lt;ENDITERATE: "enditerate"&gt;
+| &lt;LOCAL: "local"&gt;
+| &lt;TRY: "try"&gt;
+| &lt;CATCH: "catch"&gt;
+| &lt;WHILE: "while"&gt;
+| &lt;WHILEREC: "whilerec"&gt;
+| &lt;IN: "in"&gt;
+| &lt;EQ: "="&gt;
+| &lt;LT: "&lt;"&gt;
+| &lt;LE: "&lt;="&gt;
+| &lt;GT: "&gt;"&gt;
+| &lt;GE: "&gt;="&gt;
+| &lt;NEQ: "!="&gt;
+| &lt;PLUS: "+"&gt;
+| &lt;MINUS: "-"&gt;
+| &lt;MULT: "*"&gt;
+| &lt;DIV: "/"&gt;
+| &lt;PWR: "^"&gt;
+}
+
+   </PRE></TD>
+		</TR>
+		<!-- Special token -->
+		<TR>
+			<TD><PRE>
+/* IDENTIFIERS AND NUMBERS */</PRE></TD>
+		</TR>
+		<!-- Token -->
+		<TR>
+			<TD><PRE>
+&lt;DEFAULT&gt; TOKEN : {
+&lt;NUMBER: (&lt;DIGIT&gt;)+&gt;
+| &lt;NATNUMBER: (&lt;DIGIT&gt;)+ "n"&gt;
+| &lt;REAL_NUMBER: (&lt;DIGIT&gt;)+ "." (&lt;DIGIT&gt;)+&gt;
+| &lt;COMPLEX_NUMBER: ((["+","-"])? (&lt;DIGIT&gt;)+ ("." (&lt;DIGIT&gt;)+)?)? (["+","-"])? "i" ((&lt;DIGIT&gt;)+ ("." (&lt;DIGIT&gt;)+)?)?&gt;
+| &lt;ID_VARIABLE: "$" &lt;LETTER&gt; (&lt;LETTER&gt; | &lt;DIGIT&gt;)*&gt;
+| &lt;ID_ENUM: ["A"-"Z"] ["A"-"Z"] ("_" | ["A"-"Z"] | &lt;DIGIT&gt;)*&gt;
+| &lt;ID_DOMAIN: ["A"-"Z"] ("_" | ["a"-"z"] | ["A"-"Z"] | &lt;DIGIT&gt;)*&gt;
+| &lt;ID_RULE: "r_" (&lt;LETTER&gt; | &lt;DIGIT&gt;)+&gt;
+| &lt;ID_INVARIANT: "inv_" (&lt;LETTER&gt; | &lt;DIGIT&gt;)+&gt;
+| &lt;ID_FUNCTION: ["a"-"z"] (&lt;LETTER&gt; | &lt;DIGIT&gt;)*&gt;
+| &lt;#LETTER: ["_","a"-"z","A"-"Z"]&gt;
+| &lt;#DIGIT: ["0"-"9"]&gt;
+| &lt;CHAR_LITERAL: "\'" (~["\'","\\","\n","\r"] | "\\" (["n","t","b","r","f","\\","\'","\""] | ["0"-"7"] (["0"-"7"])? | ["0"-"3"] ["0"-"7"] ["0"-"7"]))* "\'"&gt;
+| &lt;STRING_LITERAL: "\"" (~["\"","\\","\n","\r"] | "\\" (["n","t","b","r","f","\\","\'","\""] | ["0"-"7"] (["0"-"7"])? | ["0"-"3"] ["0"-"7"] ["0"-"7"]))* "\""&gt;
+}
+
+   </PRE></TD>
+		</TR>
+		<!-- Token -->
+		<TR>
+			<TD><PRE>
+&lt;GENERIC_ID&gt; TOKEN : {
+&lt;ID: &lt;LETTER&gt; (&lt;LETTER&gt; | &lt;DIGIT&gt;)*&gt; : DEFAULT
+}
+
+   </PRE></TD>
+		</TR>
+		<!-- Token -->
+		<TR>
+			<TD><PRE>
+&lt;MODULE_ID&gt; TOKEN : {
+&lt;MOD_ID: (&lt;LETTER&gt; | "." | "/" | "\\") (&lt;LETTER&gt; | &lt;DIGIT&gt; | "." | "/" | "\\" | ":")*&gt; : DEFAULT
+}
+
+   </PRE></TD>
+		</TR>
+	</TABLE>
+	<H2 ALIGN=CENTER>NON-TERMINALS</H2>
+	<TABLE>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod1">Asm</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( &lt;ASYNCR&gt; )? ( &lt;ASM&gt;
+				| &lt;MODULE&gt; ) <A HREF="#prod2">ID</A> <A HREF="#prod3">Header</A>
+				<A HREF="#prod4">Body</A> ( &lt;MAIN&gt; <A HREF="#prod5">MacroDeclaration</A>
+				)? ( ( <A HREF="#prod6">Initialization</A> )* &lt;Default&gt; <A
+				HREF="#prod6">Initialization</A> ( <A HREF="#prod6">Initialization</A>
+				)* )? &lt;EOF&gt;
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod3">Header</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( <A HREF="#prod7">ImportClause</A>
+				)* ( <A HREF="#prod8">ExportClause</A> )? <A HREF="#prod9">Signature</A></TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod7">ImportClause</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;IMPORT&gt; <A HREF="#prod10">MOD_ID</A>
+				( "(" ( <A HREF="#prod11">ID_DOMAIN</A> | <A HREF="#prod12">ID_FUNCTION</A>
+				| <A HREF="#prod13">ID_RULE</A> ) ( "," ( <A HREF="#prod11">ID_DOMAIN</A>
+				| <A HREF="#prod12">ID_FUNCTION</A> | <A HREF="#prod13">ID_RULE</A>
+				) )* ")" )?
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod8">ExportClause</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;EXPORT&gt; ( ( ( <A
+				HREF="#prod11">ID_DOMAIN</A> | <A HREF="#prod12">ID_FUNCTION</A> | <A
+				HREF="#prod13">ID_RULE</A> ) ( "," ( <A HREF="#prod11">ID_DOMAIN</A>
+				| <A HREF="#prod12">ID_FUNCTION</A> | <A HREF="#prod13">ID_RULE</A>
+				) )* ) | "*" )
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod9">Signature</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;SIGNATURE&gt; ":" ( <A
+				HREF="#prod14">Domain</A> )* ( <A HREF="#prod15">Function</A> )*
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod6">Initialization</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;INIT&gt; <A HREF="#prod2">ID</A>
+				":" ( <A HREF="#prod16">DomainInitialization</A> )* ( <A
+				HREF="#prod17">FunctionInitialization</A> )* ( <A HREF="#prod18">AgentInitialization</A>
+				)*
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod16">DomainInitialization</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;DOMAIN&gt; <A HREF="#prod11">ID_DOMAIN</A>
+				"=" <A HREF="#prod19">Term</A></TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod17">FunctionInitialization</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;FUNCTION&gt; <A
+				HREF="#prod12">ID_FUNCTION</A> ( "(" <A HREF="#prod20">VariableTerm</A>
+				&lt;IN&gt; <A HREF="#prod21">getDomainByID</A> ( "," <A
+				HREF="#prod20">VariableTerm</A> &lt;IN&gt; <A HREF="#prod21">getDomainByID</A>
+				)* ")" )? "=" <A HREF="#prod19">Term</A></TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod18">AgentInitialization</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;AGENT&gt; <A HREF="#prod11">ID_DOMAIN</A>
+				":" <A HREF="#prod22">MacroCallRule</A></TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod4">Body</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;DEFINITIONS&gt; ":" ( <A
+				HREF="#prod23">DomainDefinition</A> )* ( <A HREF="#prod24">FunctionDefinition</A>
+				)* ( <A HREF="#prod25">RuleDeclaration</A> )* ( <A HREF="#prod26">Invariant</A>
+				)*
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod23">DomainDefinition</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;DOMAIN&gt; <A HREF="#prod11">ID_DOMAIN</A>
+				"=" <A HREF="#prod19">Term</A></TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod24">FunctionDefinition</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;FUNCTION&gt; <A
+				HREF="#prod12">ID_FUNCTION</A> ( "(" <A HREF="#prod20">VariableTerm</A>
+				&lt;IN&gt; <A HREF="#prod21">getDomainByID</A> ( "," <A
+				HREF="#prod20">VariableTerm</A> &lt;IN&gt; <A HREF="#prod21">getDomainByID</A>
+				)* ")" )? "=" <A HREF="#prod19">Term</A></TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod25">RuleDeclaration</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( <A HREF="#prod5">MacroDeclaration</A>
+				| <A HREF="#prod27">TurboDeclaration</A> )
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod5">MacroDeclaration</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( &lt;MACRO&gt; )? &lt;RULE&gt; <A
+				HREF="#prod13">ID_RULE</A> ( "(" <A HREF="#prod20">VariableTerm</A>
+				&lt;IN&gt; <A HREF="#prod21">getDomainByID</A> ( "," <A
+				HREF="#prod20">VariableTerm</A> &lt;IN&gt; <A HREF="#prod21">getDomainByID</A>
+				)* ")" )? "=" <A HREF="#prod22">Rule</A></TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod27">TurboDeclaration</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;TURBO&gt; &lt;RULE&gt; <A
+				HREF="#prod13">ID_RULE</A> ( "(" <A HREF="#prod20">VariableTerm</A>
+				&lt;IN&gt; <A HREF="#prod21">getDomainByID</A> ( "," <A
+				HREF="#prod20">VariableTerm</A> &lt;IN&gt; <A HREF="#prod21">getDomainByID</A>
+				)* ")" )? ( &lt;IN&gt; <A HREF="#prod21">getDomainByID</A> )? "=" <A
+				HREF="#prod22">Rule</A></TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod26">Invariant</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;INVARIANT&gt; ( <A
+				HREF="#prod28">ID_INVARIANT</A> )? &lt;OVER&gt; ( <A HREF="#prod11">ID_DOMAIN</A>
+				| <A HREF="#prod12">ID_FUNCTION</A> ( "(" ( <A HREF="#prod21">getDomainByID</A>
+				)? ")" )? | <A HREF="#prod13">ID_RULE</A> ) ( "," ( <A
+				HREF="#prod11">ID_DOMAIN</A> | <A HREF="#prod12">ID_FUNCTION</A> (
+				"(" ( <A HREF="#prod21">getDomainByID</A> )? ")" )? | <A
+				HREF="#prod13">ID_RULE</A> ) )* ":" <A HREF="#prod19">Term</A></TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod14">Domain</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( <A HREF="#prod29">ConcreteDomain</A>
+				| <A HREF="#prod30">TypeDomain</A> )
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod29">ConcreteDomain</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( &lt;DYNAMIC&gt; )?
+				&lt;DOMAIN&gt; <A HREF="#prod11">ID_DOMAIN</A> &lt;SUBSETOF&gt; <A
+				HREF="#prod21">getDomainByID</A>
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod30">TypeDomain</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( <A HREF="#prod31">AnyDomain</A>
+				| <A HREF="#prod32">StructuredTD</A> | <A HREF="#prod33">EnumTD</A>
+				| <A HREF="#prod34">AbstractTD</A> | <A HREF="#prod35">BasicTD</A> )
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod31">AnyDomain</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;ANYDOMAIN&gt; <A
+				HREF="#prod11">ID_DOMAIN</A></TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod35">BasicTD</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;BASIC&gt; &lt;DOMAIN&gt; <A
+				HREF="#prod11">ID_DOMAIN</A></TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod34">AbstractTD</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( &lt;DYNAMIC&gt; )?
+				&lt;ABSTRACT&gt; &lt;DOMAIN&gt; <A HREF="#prod11">ID_DOMAIN</A>
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod33">EnumTD</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;ENUM&gt; &lt;DOMAIN&gt; <A
+				HREF="#prod11">ID_DOMAIN</A> "=" "{" <A HREF="#prod36">EnumElement</A>
+				( "|" <A HREF="#prod36">EnumElement</A> )* "}"
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod36">EnumElement</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE><A HREF="#prod37">ID_ENUM</A></TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod32">StructuredTD</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( <A HREF="#prod38">ProductDomain</A>
+				| <A HREF="#prod39">SequenceDomain</A> | <A HREF="#prod40">PowersetDomain</A>
+				| <A HREF="#prod41">BagDomain</A> | <A HREF="#prod42">MapDomain</A>
+				)
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod38">ProductDomain</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;PROD&gt; "(" <A
+				HREF="#prod21">getDomainByID</A> ( "," <A HREF="#prod21">getDomainByID</A>
+				)+ ")"
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod39">SequenceDomain</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;SEQ&gt; "(" <A HREF="#prod21">getDomainByID</A>
+				")"
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod40">PowersetDomain</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;POWERSET&gt; "(" <A
+				HREF="#prod21">getDomainByID</A> ")"
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod41">BagDomain</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;BAG&gt; "(" <A HREF="#prod21">getDomainByID</A>
+				")"
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod42">MapDomain</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;MAP&gt; "(" <A HREF="#prod21">getDomainByID</A>
+				"," <A HREF="#prod21">getDomainByID</A> ")"
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod21">getDomainByID</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( <A HREF="#prod11">ID_DOMAIN</A>
+				| <A HREF="#prod32">StructuredTD</A> )
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod15">Function</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( <A HREF="#prod43">BasicFunction</A>
+				| <A HREF="#prod44">DerivedFunction</A> )
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod43">BasicFunction</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( <A HREF="#prod45">StaticFunction</A>
+				| <A HREF="#prod46">DynamicFunction</A> )
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod44">DerivedFunction</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;DERIVED&gt; <A HREF="#prod12">ID_FUNCTION</A>
+				":" ( <A HREF="#prod21">getDomainByID</A> "-&gt;" )? <A
+				HREF="#prod21">getDomainByID</A></TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod45">StaticFunction</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;STATIC&gt; <A HREF="#prod12">ID_FUNCTION</A>
+				":" ( <A HREF="#prod21">getDomainByID</A> "-&gt;" )? <A
+				HREF="#prod21">getDomainByID</A></TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod46">DynamicFunction</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( <A HREF="#prod47">OutFunction</A>
+				| <A HREF="#prod48">MonitoredFunction</A> | <A HREF="#prod49">SharedFunction</A>
+				| <A HREF="#prod50">ControlledFunction</A> | <A HREF="#prod51">LocalFunction</A>
+				)
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod51">LocalFunction</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( &lt;DYNAMIC&gt; )?
+				&lt;LOCAL&gt; <A HREF="#prod12">ID_FUNCTION</A> ":" ( <A
+				HREF="#prod21">getDomainByID</A> "-&gt;" )? <A HREF="#prod21">getDomainByID</A>
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod50">ControlledFunction</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( &lt;DYNAMIC&gt; )?
+				&lt;CONTROLLED&gt; <A HREF="#prod12">ID_FUNCTION</A> ":" ( <A
+				HREF="#prod21">getDomainByID</A> "-&gt;" )? <A HREF="#prod21">getDomainByID</A>
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod49">SharedFunction</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( &lt;DYNAMIC&gt; )?
+				&lt;SHARED&gt; <A HREF="#prod12">ID_FUNCTION</A> ":" ( <A
+				HREF="#prod21">getDomainByID</A> "-&gt;" )? <A HREF="#prod21">getDomainByID</A>
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod48">MonitoredFunction</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( &lt;DYNAMIC&gt; )?
+				&lt;MONITORED&gt; <A HREF="#prod12">ID_FUNCTION</A> ":" ( <A
+				HREF="#prod21">getDomainByID</A> "-&gt;" )? <A HREF="#prod21">getDomainByID</A>
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod47">OutFunction</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( &lt;DYNAMIC&gt; )? &lt;OUT&gt;
+				<A HREF="#prod12">ID_FUNCTION</A> ":" ( <A HREF="#prod21">getDomainByID</A>
+				"-&gt;" )? <A HREF="#prod21">getDomainByID</A>
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod19">Term</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( <A HREF="#prod52">Expression</A>
+				| <A HREF="#prod53">ExtendedTerm</A> )
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod52">Expression</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE><A HREF="#prod54">or_xorLogicExpr</A>
+				( ( &lt;ID_FUNCTION&gt; <A HREF="#prod54">or_xorLogicExpr</A> |
+				&lt;ID_FUNCTION&gt; <A HREF="#prod54">or_xorLogicExpr</A> ) )*</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod67">or_xorLogicExpr</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE><A HREF="#prod68">andLogicExpr</A>
+				( ( &lt;ID_FUNCTION&gt; | &lt;ID_FUNCTION&gt; ) <A HREF="#prod68">andLogicExpr</A>
+				)*</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod68">andLogicExpr</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE><A HREF="#prod69">relationalExpr</A>
+				( &lt;ID_FUNCTION&gt; <A HREF="#prod69">relationalExpr</A> )*</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod69">relationalExpr</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE><A HREF="#prod70">notLogicExpr</A>
+				( ( &lt;EQ&gt; <A HREF="#prod70">notLogicExpr</A> | &lt;NEQ&gt; <A
+				HREF="#prod70">notLogicExpr</A> | &lt;LT&gt; <A HREF="#prod70">notLogicExpr</A>
+				| &lt;LE&gt; <A HREF="#prod70">notLogicExpr</A> | &lt;GT&gt; <A
+				HREF="#prod70">notLogicExpr</A> | &lt;GE&gt; <A HREF="#prod70">notLogicExpr</A>
+				) )*</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod70">notLogicExpr</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( &lt;ID_FUNCTION&gt; <A
+				HREF="#prod71">additiveExpr</A> | <A HREF="#prod71">additiveExpr</A>
+				)
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod71">additiveExpr</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE><A HREF="#prod72">multiplicativeExpr</A>
+				( ( &lt;PLUS&gt; <A HREF="#prod72">multiplicativeExpr</A> |
+				&lt;MINUS&gt; <A HREF="#prod72">multiplicativeExpr</A> ) )*</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod72">multiplicativeExpr</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE><A HREF="#prod73">powerExpr</A> (
+				( &lt;MULT&gt; <A HREF="#prod73">powerExpr</A> | &lt;DIV&gt; <A
+				HREF="#prod73">powerExpr</A> | &lt;ID_FUNCTION&gt; <A HREF="#prod73">powerExpr</A>
+				) )*</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod73">powerExpr</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE><A HREF="#prod74">unaryExpr</A> (
+				&lt;PWR&gt; <A HREF="#prod74">unaryExpr</A> )*</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod74">unaryExpr</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( ( &lt;PLUS&gt; <A
+				HREF="#prod74">unaryExpr</A> | &lt;MINUS&gt; <A HREF="#prod74">unaryExpr</A>
+				) | <A HREF="#prod75">basicExpr</A> )
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod75">basicExpr</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( <A HREF="#prod76">BasicTerm</A>
+				| <A HREF="#prod77">DomainTerm</A> | <A HREF="#prod78">FiniteQuantificationTerm</A>
+				| "(" <A HREF="#prod65">Expression</A> ")" )
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod64">BasicTerm</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( <A HREF="#prod67">ConstantTerm</A>
+				| <A HREF="#prod20">VariableTerm</A> | <A HREF="#prod68">FunctionTerm</A>
+				)
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod68">FunctionTerm</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( <A HREF="#prod69">ID_AGENT</A>
+				"." )? <A HREF="#prod12">ID_FUNCTION</A> ( <A HREF="#prod70">TupleTerm</A>
+				)?
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod71">LocationTerm</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( <A HREF="#prod69">ID_AGENT</A>
+				"." )? <A HREF="#prod12">ID_FUNCTION</A> ( <A HREF="#prod70">TupleTerm</A>
+				)?
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod20">VariableTerm</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE><A HREF="#prod72">ID_VARIABLE</A></TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod67">ConstantTerm</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( <A HREF="#prod73">ComplexTerm</A>
+				| <A HREF="#prod74">RealTerm</A> | <A HREF="#prod75">IntegerTerm</A>
+				| <A HREF="#prod76">NaturalTerm</A> | <A HREF="#prod77">CharTerm</A>
+				| <A HREF="#prod78">StringTerm</A> | <A HREF="#prod79">BooleanTerm</A>
+				| <A HREF="#prod80">UndefTerm</A> | <A HREF="#prod81">EnumTerm</A> )
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod73">ComplexTerm</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;COMPLEX_NUMBER&gt;</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod74">RealTerm</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( &lt;REAL_NUMBER&gt; )</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod75">IntegerTerm</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;NUMBER&gt;</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod76">NaturalTerm</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;NATNUMBER&gt;</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod77">CharTerm</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;CHAR_LITERAL&gt;</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod78">StringTerm</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;STRING_LITERAL&gt;</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod79">BooleanTerm</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( &lt;TRUE&gt; | &lt;FALSE&gt; )</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod80">UndefTerm</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;UNDEF&gt;</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod81">EnumTerm</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE><A HREF="#prod37">ID_ENUM</A></TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod53">ExtendedTerm</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( <A HREF="#prod82">ConditionalTerm</A>
+				| <A HREF="#prod83">CaseTerm</A> | <A HREF="#prod70">TupleTerm</A> |
+				<A HREF="#prod84">VariableBindingTerm</A> | <A HREF="#prod85">CollectionTerm</A>
+				| <A HREF="#prod86">RuleAsTerm</A> | <A HREF="#prod65">DomainTerm</A>
+				)
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod82">ConditionalTerm</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;IF&gt; <A HREF="#prod19">Term</A>
+				&lt;THEN&gt; <A HREF="#prod19">Term</A> ( &lt;ELSE&gt; <A
+				HREF="#prod19">Term</A> )? &lt;ENDIF&gt;
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod83">CaseTerm</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;SWITCH&gt; <A HREF="#prod19">Term</A>
+				( &lt;CASE&gt; <A HREF="#prod19">Term</A> ":" <A HREF="#prod19">Term</A>
+				)+ ( &lt;OTHERWISE&gt; <A HREF="#prod19">Term</A> )?
+				&lt;END_SWITCH&gt;
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod70">TupleTerm</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>"(" <A HREF="#prod19">Term</A> (
+				"," <A HREF="#prod19">Term</A> )* ")"
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod85">CollectionTerm</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( <A HREF="#prod87">SequenceTerm</A>
+				| <A HREF="#prod88">MapTerm</A> | <A HREF="#prod89">SetTerm</A> | <A
+				HREF="#prod90">BagTerm</A> )
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod87">SequenceTerm</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>"[" ( <A HREF="#prod19">Term</A>
+				( ( "," <A HREF="#prod19">Term</A> )+ | ( ":" <A HREF="#prod19">Term</A>
+				( "," ( <A HREF="#prod19">Term</A> ) )? ) )? )? "]"
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod89">SetTerm</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>"{" ( <A HREF="#prod19">Term</A>
+				( ( "," <A HREF="#prod19">Term</A> )+ | ( ":" <A HREF="#prod19">Term</A>
+				( "," ( <A HREF="#prod19">Term</A> ) )? ) )? )? "}"
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod88">MapTerm</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>"{" ( "-&gt;" | ( <A
+				HREF="#prod19">Term</A> "-&gt;" <A HREF="#prod19">Term</A> ( "," <A
+				HREF="#prod19">Term</A> "-&gt;" <A HREF="#prod19">Term</A> )* ) )
+				"}"
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod90">BagTerm</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>"&lt;" ( <A HREF="#prod19">Term</A>
+				( ( "," <A HREF="#prod19">Term</A> )+ | ( ":" <A HREF="#prod19">Term</A>
+				( "," ( <A HREF="#prod19">Term</A> ) )? ) )? )? "&gt;"
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod84">VariableBindingTerm</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( <A HREF="#prod91">LetTerm</A> |
+				<A HREF="#prod66">FiniteQuantificationTerm</A> | <A HREF="#prod92">ComprehensionTerm</A>
+				)
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod66">FiniteQuantificationTerm</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( <A HREF="#prod93">ForallTerm</A>
+				| <A HREF="#prod94">ExistUniqueTerm</A> | <A HREF="#prod95">ExistTerm</A>
+				)
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod95">ExistTerm</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>"(" &lt;EXIST&gt; <A
+				HREF="#prod20">VariableTerm</A> &lt;IN&gt; <A HREF="#prod19">Term</A>
+				( "," <A HREF="#prod20">VariableTerm</A> &lt;IN&gt; <A
+				HREF="#prod19">Term</A> )* ( &lt;WITH&gt; <A HREF="#prod19">Term</A>
+				)? ")"
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod94">ExistUniqueTerm</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>"(" &lt;EXIST&gt; &lt;UNIQUE&gt;
+				<A HREF="#prod20">VariableTerm</A> &lt;IN&gt; <A HREF="#prod19">Term</A>
+				( "," <A HREF="#prod20">VariableTerm</A> &lt;IN&gt; <A
+				HREF="#prod19">Term</A> )* ( &lt;WITH&gt; <A HREF="#prod19">Term</A>
+				)? ")"
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod93">ForallTerm</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>"(" &lt;FORALL&gt; <A
+				HREF="#prod20">VariableTerm</A> &lt;IN&gt; <A HREF="#prod19">Term</A>
+				( "," <A HREF="#prod20">VariableTerm</A> &lt;IN&gt; <A
+				HREF="#prod19">Term</A> )* ( &lt;WITH&gt; <A HREF="#prod19">Term</A>
+				)? ")"
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod91">LetTerm</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;LET&gt; "(" <A HREF="#prod20">VariableTerm</A>
+				"=" <A HREF="#prod19">Term</A> ( "," <A HREF="#prod20">VariableTerm</A>
+				"=" <A HREF="#prod19">Term</A> )* ")" &lt;IN&gt; <A HREF="#prod19">Term</A>
+				&lt;ENDLET&gt;
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod92">ComprehensionTerm</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( <A HREF="#prod96">SetCT</A> | <A
+				HREF="#prod97">MapCT</A> | <A HREF="#prod98">SequenceCT</A> | <A
+				HREF="#prod99">BagCT</A> )
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod96">SetCT</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>"{" <A HREF="#prod20">VariableTerm</A>
+				&lt;IN&gt; <A HREF="#prod19">Term</A> ( "," <A HREF="#prod20">VariableTerm</A>
+				&lt;IN&gt; <A HREF="#prod19">Term</A> )* ( "|" <A HREF="#prod19">Term</A>
+				)? ":" <A HREF="#prod19">Term</A> "}"
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod97">MapCT</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>"{" <A HREF="#prod20">VariableTerm</A>
+				&lt;IN&gt; <A HREF="#prod19">Term</A> ( "," <A HREF="#prod20">VariableTerm</A>
+				&lt;IN&gt; <A HREF="#prod19">Term</A> )* ( "|" <A HREF="#prod19">Term</A>
+				)? ":" <A HREF="#prod19">Term</A> "-&gt;" <A HREF="#prod19">Term</A>
+				"|" "}"
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod98">SequenceCT</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>"[" <A HREF="#prod20">VariableTerm</A>
+				&lt;IN&gt; <A HREF="#prod19">Term</A> ( "," <A HREF="#prod20">VariableTerm</A>
+				&lt;IN&gt; <A HREF="#prod19">Term</A> )* ( "|" <A HREF="#prod19">Term</A>
+				)? ":" <A HREF="#prod19">Term</A> "]"
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod99">BagCT</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>"&lt;" <A HREF="#prod20">VariableTerm</A>
+				&lt;IN&gt; <A HREF="#prod19">Term</A> ( "," <A HREF="#prod20">VariableTerm</A>
+				&lt;IN&gt; <A HREF="#prod19">Term</A> )* ( "|" <A HREF="#prod19">Term</A>
+				)? ":" <A HREF="#prod19">Term</A> "&gt;"
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod65">DomainTerm</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE><A HREF="#prod21">getDomainByID</A></TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod88">RuleAsTerm</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>"&lt;&lt;" <A HREF="#prod13">ID_RULE</A>
+				( "(" <A HREF="#prod21">getDomainByID</A> ( "," <A HREF="#prod21">getDomainByID</A>
+				)* ")" )? "&gt;&gt;"
+			</TD>
+		</TR>
+		<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod22">Rule</A></TD>
+		<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+		<TD ALIGN=LEFT VALIGN=BASELINE>( <A HREF="#prod100">BasicRule</A>
+			| <A HREF="#prod101">TurboRule</A> | <A HREF="#prod102">UpdateRule</A>
+			| <A HREF="#prod103">TurboReturnRule</A> | <A HREF="#prod104">TermAsRule</A>
+			| <A HREF="#prod105">DerivedRule</A> )
+		</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod104">TermAsRule</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( <A HREF="#prod68">FunctionTerm</A>
+				| <A HREF="#prod20">VariableTerm</A> )
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod100">BasicRule</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( <A HREF="#prod106">SkipRule</A>
+				| <A HREF="#prod107">MacroCallRule</A> | <A HREF="#prod108">BlockRule</A>
+				| <A HREF="#prod109">ConditionalRule</A> | <A HREF="#prod110">ChooseRule</A>
+				| <A HREF="#prod111">ForallRule</A> | <A HREF="#prod112">LetRule</A>
+				| <A HREF="#prod113">ExtendRule</A> )
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod106">SkipRule</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;Skip&gt;</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod102">UpdateRule</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( <A HREF="#prod71">LocationTerm</A>
+				| <A HREF="#prod20">VariableTerm</A> ) ":=" <A HREF="#prod19">Term</A></TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod108">BlockRule</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;PAR&gt; <A HREF="#prod22">Rule</A>
+				( <A HREF="#prod22">Rule</A> )+ &lt;ENDPAR&gt;
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod109">ConditionalRule</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;IF&gt; <A HREF="#prod19">Term</A>
+				&lt;THEN&gt; <A HREF="#prod22">Rule</A> ( &lt;ELSE&gt; <A
+				HREF="#prod22">Rule</A> )? &lt;ENDIF&gt;
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod110">ChooseRule</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;CHOOSE&gt; <A HREF="#prod20">VariableTerm</A>
+				&lt;IN&gt; <A HREF="#prod19">Term</A> ( "," <A HREF="#prod20">VariableTerm</A>
+				&lt;IN&gt; <A HREF="#prod19">Term</A> )* &lt;WITH&gt; <A
+				HREF="#prod19">Term</A> &lt;DO&gt; <A HREF="#prod22">Rule</A> (
+				&lt;IFNONE&gt; <A HREF="#prod22">Rule</A> )?
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod111">ForallRule</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;FORALL&gt; <A HREF="#prod20">VariableTerm</A>
+				&lt;IN&gt; <A HREF="#prod19">Term</A> ( "," <A HREF="#prod20">VariableTerm</A>
+				&lt;IN&gt; <A HREF="#prod19">Term</A> )* ( &lt;WITH&gt; <A
+				HREF="#prod19">Term</A> )? &lt;DO&gt; <A HREF="#prod22">Rule</A></TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod112">LetRule</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;LET&gt; "(" <A HREF="#prod20">VariableTerm</A>
+				"=" <A HREF="#prod19">Term</A> ( "," <A HREF="#prod20">VariableTerm</A>
+				"=" <A HREF="#prod19">Term</A> )* ")" &lt;IN&gt; <A HREF="#prod22">Rule</A>
+				&lt;ENDLET&gt;
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod107">MacroCallRule</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE><A HREF="#prod13">ID_RULE</A> "["
+				( <A HREF="#prod19">Term</A> ( "," <A HREF="#prod19">Term</A> )* )?
+				"]"</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod113">ExtendRule</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;EXTEND&gt; <A HREF="#prod11">ID_DOMAIN</A>
+				&lt;WITH&gt; <A HREF="#prod20">VariableTerm</A> ( "," <A
+				HREF="#prod20">VariableTerm</A> )* &lt;DO&gt; <A HREF="#prod22">Rule</A></TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod101">TurboRule</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( <A HREF="#prod114">SeqRule</A>
+				| <A HREF="#prod115">IterateRule</A> | <A HREF="#prod116">TurboCallRule</A>
+				| <A HREF="#prod117">TurboLocalStateRule</A> )
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod114">SeqRule</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;seq&gt; <A HREF="#prod22">Rule</A>
+				( <A HREF="#prod22">Rule</A> )+ &lt;ENDSEQ&gt;
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod115">IterateRule</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;ITERATE&gt; <A HREF="#prod22">Rule</A>
+				&lt;ENDITERATE&gt;
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod116">TurboCallRule</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE><A HREF="#prod13">ID_RULE</A> "("
+				( <A HREF="#prod19">Term</A> ( "," <A HREF="#prod19">Term</A> )* )?
+				")"</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod103">TurboReturnRule</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( <A HREF="#prod71">LocationTerm</A>
+				| <A HREF="#prod20">VariableTerm</A> ) "&lt;-" <A HREF="#prod116">TurboCallRule</A></TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod117">TurboLocalStateRule</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE><A HREF="#prod51">LocalFunction</A>
+				"[" <A HREF="#prod22">Rule</A> "]" ( <A HREF="#prod51">LocalFunction</A>
+				"[" <A HREF="#prod22">Rule</A> "]" )* <A HREF="#prod22">Rule</A></TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod118">TryCatchRule</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;TRY&gt; <A HREF="#prod22">Rule</A>
+				&lt;CATCH&gt; ( <A HREF="#prod19">Term</A> ) ( "," ( <A
+				HREF="#prod19">Term</A> ) )* <A HREF="#prod22">Rule</A></TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod105">DerivedRule</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( <A HREF="#prod119">BasicDerivedRule</A>
+				| <A HREF="#prod120">TurboDerivedRule</A> )
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod119">BasicDerivedRule</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE><A HREF="#prod121">CaseRule</A></TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod121">CaseRule</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;SWITCH&gt; <A HREF="#prod19">Term</A>
+				( &lt;CASE&gt; <A HREF="#prod19">Term</A> ":" <A HREF="#prod22">Rule</A>
+				)+ ( &lt;OTHERWISE&gt; <A HREF="#prod22">Rule</A> )?
+				&lt;END_SWITCH&gt;
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod120">TurboDerivedRule</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( <A HREF="#prod122">RecursiveWhileRule</A>
+				| <A HREF="#prod123">IterativeWhileRule</A> )
+			</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod122">RecursiveWhileRule</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;WHILEREC&gt; <A
+				HREF="#prod19">Term</A> &lt;DO&gt; <A HREF="#prod22">Rule</A></TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod123">IterativeWhileRule</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;WHILE&gt; <A HREF="#prod19">Term</A>
+				&lt;DO&gt; <A HREF="#prod22">Rule</A></TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod72">ID_VARIABLE</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;ID_VARIABLE&gt;</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod37">ID_ENUM</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;ID_ENUM&gt;</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod11">ID_DOMAIN</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;ID_DOMAIN&gt;</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod13">ID_RULE</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;ID_RULE&gt;</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod28">ID_INVARIANT</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;ID_INVARIANT&gt;</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod12">ID_FUNCTION</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;ID_FUNCTION&gt;</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod69">ID_AGENT</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>&lt;ID_FUNCTION&gt;</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod2">ID</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( &lt;ID&gt; )</TD>
+		</TR>
+		<TR>
+			<TD ALIGN=RIGHT VALIGN=BASELINE><A NAME="prod10">MOD_ID</A></TD>
+			<TD ALIGN=CENTER VALIGN=BASELINE>::=</TD>
+			<TD ALIGN=LEFT VALIGN=BASELINE>( &lt;MOD_ID&gt; )</TD>
+		</TR>
+	</TABLE>
+</BODY>
+</HTML>

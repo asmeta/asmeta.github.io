@@ -1,0 +1,31 @@
+---
+title: Validator
+in_menu: true
+routed_title: AsmetaV
+sort_info: 3
+---
+
+**AsmetaV** (Asmeta Validator) can be used to validate AsmetaL specifications by scenarios.
+
+### Installation 
+
+The validator can be used either embedded in eclipse or as standalone program. For the eclipse version, follow the instructions [here](./index.html#installing-asmeta-in-eclipse)
+
+### Use in eclipse
+<p>You can run the tool in two modes:</p>
+<ul>
+  <li><img src="http://svn.code.sf.net/p/asmeta/code/code/stable/validator/asmeta.validator.ui/icons/runValidator.gif"/> executes the scenario</li>
+  <li><img src="http://svn.code.sf.net/p/asmeta/code/code/stable/validator/asmeta.validator.ui/icons/runValidatorAndCoverage.gif"/> executes the scenario and computes the coverage</li>
+</ul>
+
+### Download as standalone
+<p>Download the validator: <a
+ href="http://svn.code.sf.net/p/asmeta/code/code/stable/validator/asmeta.validator.cli/AsmetaV.jar">
+AsmetaV.jar</a></p>
+<h3>How to run<br/>
+</h3>
+To run the ASM <span style="font-weight: bold;">validator - in brief</span>
+<pre>java -jar AsmetaV.jar &lt;filename&gt;</pre>
+
+## Paper
+It has been presented in the <a href="../papers/index.html#ABZ08">ABZ08 paper</a>.
