@@ -2,3 +2,5 @@ tmp
 *.page~
 
 .DS_Store
+
+out/
