@@ -1,2 +1,4 @@
 tmp
 *.page~
+
+.DS_Store
