@@ -1,0 +1,33 @@
+// the finite state machine concrete syntax for lemp
+// IMPORTANT: You should change the property 'overwrite.pluginresources=true' in the properties file to 'overwrite.pluginresources=false' AFTER first generation
+
+
+//language Fint
+ 
+//generate secretcompartment "http://www.eclipse.org/secretcompartment"
+
+NamedElement :
+  FSM | State | Transition;
+ 
+
+FSM: 
+   "fsm" name = ID
+   "inputAlphabet" inputAlphabet = STRING
+   "outputAlphabet" outputAlphabet = STRING
+   "states" (states += State)+
+   "transitions" (transitions += Transition)*
+;
+
+State:
+   (isStart ?= "start")? name = ID
+;
+
+Transition:
+   name = ID ":"
+   from = [State] "-"  
+   input = CHARACTER
+   ("/" output = CHARACTER)?
+   "->" to = [State] ";"
+;
+
+Native CHARACTER  :"~('\n'|'\r'|' '| '\t'| '/')";
