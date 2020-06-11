@@ -23,14 +23,14 @@ Some tools are provided both as eclipse plugins and standalone jars that can be 
 
 ## Installing ASMETA in eclipse
 
-Some ASMETA tools are integrated in eclipse. The update site is <b>http://svn.code.sf.net/p/asmeta/code/code/stable/asmeta_update/</b>.
+Some ASMETA tools are integrated in eclipse. The update site is <b>https://raw.githubusercontent.com/asmeta/asmeta_update_site/master</b>.
 Perform the following steps to install an Asmeta tool from the update site:
 <p><b>1. From your Eclipse menu select <i>Help</i> <i>Software Updates</i>
 <i>Find and Install...</i></b></p>
 <p><b>2. Check <i>Search for new features</i> and press <i>Next</i>.</b>
 </p>
 <p><b>3. Press <i>New Remote Site...</i> and enter
-http://svn.code.sf.net/p/asmeta/code/code/stable/asmeta_update/ for the update site URL</b></p>
+https://raw.githubusercontent.com/asmeta/asmeta_update_site/master for the update site URL</b></p>
 <p><b>4. Press <i>Finish</i>.</b></p>
 <p><b>5. Select the desired tool(s).</b></p>
 <p><b>6. Follow the steps in the installation wizard.</b></p>
