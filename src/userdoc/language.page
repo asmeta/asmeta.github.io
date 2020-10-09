@@ -18,5 +18,5 @@ The <a href="http://fmse.di.unimi.it/asmeta/download/AsmetaL_EBNF.html">EBNF</a>
 * The [EBNF](/material/AsmetaL_EBNF.html) grammar for the AsmM textual notation. It has been developed by means of the [Java Compiler Compiler (JavaCC)](https://javacc.dev.java.net/)
 * A [quick guide](/material/AsmetaL_quickguide.html) of the concrete notation
 * A [more complete guide about the language](/material/AsmetaL_guide.pdf)
-* Several examples of ASM specifications (mono agent and multi agents) can be found under svn [here](https://sourceforge.net/p/asmeta/code/HEAD/tree/asm_examples/) 
-* **The AsmM Standard Library** A library of predefined ASM domains and functions: <a  href="https://sourceforge.net/p/asmeta/code/HEAD/tree/asm_examples/STDL/StandardLibrary.asm">StandardLibrary.asm</a> (you need this)
+* Several examples of ASM specifications (mono agent and multi agents) can be found under github [here](https://github.com/asmeta/asmeta/tree/master/asm_examples) 
+* **The AsmM Standard Library** A library of predefined ASM domains and functions: <a  href="https://github.com/asmeta/asmeta/blob/master/asm_examples/STDL/StandardLibrary.asm">StandardLibrary.asm</a> (you need this)
