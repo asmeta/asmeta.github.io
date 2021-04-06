@@ -3,9 +3,9 @@ title: Source repository
 in_menu: true
 ---
 
-The source base of Asmeta (including the documentation and the web site) is maintained now in a GitHub organization. The code is histed here:
+The source base of Asmeta (including the documentation and the web site) is maintained now in a GitHub organization. The code is hosted here:
 
-https://github.com/asmeta/asmeta
+[https://github.com/asmeta/asmeta](https://github.com/asmeta/asmeta)
 
 To checkout the code, use your favorite git tool.
 
