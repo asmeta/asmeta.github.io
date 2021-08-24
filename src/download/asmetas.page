@@ -33,10 +33,11 @@ The simulator can be used either embedded in eclipse or as standalone program. F
 
 ### Download as standalone
 
-<p>Download the interpreter: <a href="http://svn.code.sf.net/p/asmeta/code/code/stable/simulator/asmeta.simulator.cli/AsmetaS.jar">
-AsmetaS.jar</a></p>
-<h3>How to run<br/>
-</h3>
+Download the interpreter as jar file: 
+[AsmetaS.jar](https://github.com/asmeta/asmeta/raw/master/code/core/asmeta.simulator/asmeta.simulator.cli/dist/AsmetaS.jar)
+
+### How to run
+
 To run the ASM simulator <span style="font-weight: bold;">- in brief</span>
 <pre>java -jar AsmetaS.jar &lt;filename&gt;</pre>
 <h4>Usage&nbsp; with options<br/>
