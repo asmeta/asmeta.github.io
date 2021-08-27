@@ -14,19 +14,25 @@ The model checker can be used either embedded in eclipse or as standalone progra
 The NuSMV model checker must be installed in the system and added to the system path. NuSMV can be downloaded from here: <a href="http://nusmv.fbk.eu/" target='_blank'>
 http://nusmv.fbk.eu/</a>
 
-Libraries with temporal operators can be downloaded from here: <a href="https://sourceforge.net/p/asmeta/code/HEAD/tree/asm_examples/STDL/CTLlibrary.asm?format=raw" target='_blank'>CTL library</a>, <a href="https://sourceforge.net/p/asmeta/code/HEAD/tree/asm_examples/STDL/LTLlibrary.asm?format=raw" target='_blank'>LTL library</a>
+Libraries with temporal operators can be downloaded from here: 
+
+<https://github.com/asmeta/asmeta/blob/master/asm_examples/STDL>
+
+*  CTL library - (download it)[https://raw.githubusercontent.com/asmeta/asmeta/master/asm_examples/STDL/CTLlibrary.asm]
+
+*  LTL library - (download it)[https://raw.githubusercontent.com/asmeta/asmeta/master/asm_examples/STDL/LTLlibrary.asm]
 
 ### Use in eclipse
 <p>You can run the tool in two modes:</p>
 <ul>
-  <li><img src="http://svn.code.sf.net/p/asmeta/code/code/experimental/asmetasmv/asmeta.smv.ui/icons/runAsmetaSMVtranslate.gif"/> translates the AsmetaL model in NuSMV</li>
-  <li><img src="http://svn.code.sf.net/p/asmeta/code/code/experimental/asmetasmv/asmeta.smv.ui/icons/runAsmetaSMVtranslateAndExec.gif"/> translates the AsmetaL model in NuSMV and then executes the NuSMV model</li>
+  <li><img src="https://raw.githubusercontent.com/asmeta/asmeta/master/code/extensions/asmetasmv/asmeta.smv.ui/icons/runAsmetaSMVtranslate.gif"/> translates the AsmetaL model in NuSMV</li>
+  <li><img src="https://raw.githubusercontent.com/asmeta/asmeta/master/code/extensions/asmetasmv/asmeta.smv.ui/icons/runAsmetaSMVtranslateAndExec.gif"/> translates the AsmetaL model in NuSMV and then executes the NuSMV model</li>
 </ul>
 
 Other options can be set in the preferences: Window -&gt; Preferences -&gt; Asmeta -&gt; AsmetaSMV
 
 ### Download as standalone
-<p>Download the tool: <a href="http://svn.code.sf.net/p/asmeta/code/code/experimental/asmetasmv/asmeta.smv/AsmetaSMV.jar">
+<p>Download the tool: <a href="https://github.com/asmeta/asmeta/raw/master/code/extensions/asmetasmv/asmeta.smv/dist/AsmetaSMV.jar">
 AsmetaSMV.jar</a></p>
 <h3>How to run<br/>
 </h3>

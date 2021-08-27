@@ -16,10 +16,10 @@ in:</p>
     <p><strong>The AsmM Abstract Syntax </strong>(the metamodel)<br/>
     </p>
     <ul>
-      <li>The <a href="https://sourceforge.net/p/asmeta/code/HEAD/tree/code/stable/asmeta.emf/model/AsmM.ecore?format=raw">ecore</a> file for the AsmM<br/>
+      <li>The <a href="https://github.com/asmeta/asmeta/tree/master/code/core/asmeta.emf/model">ecore</a> file for the AsmM
       </li>
-      <li>(not yet in the metamodel, with some errors) The <a href="https://sourceforge.net/p/asmeta/code/HEAD/tree/code/stable/asmeta.emf/model/ocl/">OCL constraints</a> edited by <a href="https://projects.eclipse.org/projects/modeling.mdt.ocl">OCL for eclipse<br/>
-        </a></li>
+      <li>(not yet in the metamodel, with some errors) The <a  href="https://github.com/asmeta/asmeta/blob/master/code/core/asmeta.emf/model/ocl.7z">OCL constraints</a>
+      </li>
     </ul>
   </li>
 </ul>

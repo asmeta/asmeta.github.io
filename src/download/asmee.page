@@ -14,7 +14,7 @@ The editor is available as eclipse plugin. Follow the instructions [here](./inde
 <h2>How to use Asmee</h2>
 <p>After you have installed the Asmee plugin, you will have in eclipse the following features:</p>
 <ul>
-  <li>a wizard to <strong>create a new AsmetaL file</strong>: go to File-&gt;new File-&gt; Other -&gt; AmsetaL new File. It creates a new file. Note that the name of the asm and of the file must be the same. You probably will need also the standard library, that you can download from <a href="http://sourceforge.net/p/asmeta/code/HEAD/tree/asm_examples/STDL/StandardLibrary.asm?format=raw">StandardLibrary.asm</a>.</li>
+  <li>a wizard to <strong>create a new AsmetaL file</strong>: go to File-&gt;new File-&gt; Other -&gt; AmsetaL new File. It creates a new file. Note that the name of the asm and of the file must be the same. You probably will need also the standard library, that you can download from <a href="https://github.com/asmeta/asmeta/blob/master/asm_examples/STDL/StandardLibrary.asm">StandardLibrary.asm</a>.</li>
   <li><strong>synthax hightlighting</strong> (you can change the colors in the preferences: go to Window -&gt; Preferences -&gt; Asmeta -&gt; Asmee)</li>
 </ul>
 
