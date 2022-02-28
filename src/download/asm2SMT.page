@@ -5,13 +5,16 @@ routed_title: Asm2SMT
 sort_info: 8
 ---
 **Asm2SMT** produces a symbolic representation of an AsmetaL model.<br/>
-<h3>Download</h3>
-<p>Download the tool: <a
- href="http://svn.code.sf.net/p/asmeta/code/code/experimental/smtRepresentation/translatorToSMT/AsmToSMT.jar">AsmToSMT.jar</a></p>
-<h3>How to run<br/>
-</h3>
+### Download
+
+Download the tool: <a
+
+[AsmetaToSMT.jar](https://github.com/asmeta/asmeta/raw/master/code/extensions/asmeta.refprover/translatorToSMT/dist/AsmetaToSMT.jar)
+
+###How to run
+
 To run Asm2SMT
-<pre>java -jar Asm2SMT.jar asmetalFileName.asm</pre>
+<pre>java -jar AsmetaToSMT.jar asmetalFileName.asm</pre>
 
 
 ## Paper

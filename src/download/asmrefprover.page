@@ -4,15 +4,14 @@ in_menu: true
 routed_title: AsmRefProver
 sort_info: 7
 ---
-
-
 The **AsmRefProver** (Asmeta Refinement correctness Prover) can be used to prove the correctness of refinement steps.<br/>
 
 ### Download
 
-<p>Download the tool: <a href="http://svn.code.sf.net/p/asmeta/code/code/experimental/smtRepresentation/refinementProof/AsmRefProver.jar">AsmRefProver.jar</a></p>
-<h3>How to run<br/>
-</h3>
+Download the tool: <a href="https://github.com/asmeta/asmeta/raw/master/code/extensions/asmeta.refprover/refinementProof/dist/AsmetaRefProver.jar">AsmRefProver.jar</a>
+
+### How to run
+
 To run AsmRefProver
 <pre>java -jar AsmRefProver.jar [options...] abstractModel.asm refinedModel.asm
  -ep  : execute the proof (default: false)

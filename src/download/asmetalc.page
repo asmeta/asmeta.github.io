@@ -6,11 +6,13 @@ routed_title: Compiler
 The ***AsmetaL compiler/parser*** processes the ASM models written in the AsmetaL concrete syntax, checks for their
 consistency w.r.t. the OCL constraints of the metamodel, and translates
 information about concrete models into AsmM instances in a EMF model.<br/>
-<h3>Download</h3> 
-<p>Download the parser: <a href="http://svn.code.sf.net/p/asmeta/code/code/stable/parser_cli/AsmetaLc.jar">
-AsmetaLc.jar</a></p>
-<h3>How to run <br/>
-</h3>
+
+### Download
+
+Download the parser: [AsmetaLc.jar](https://github.com/asmeta/asmeta/raw/master/code/core/asmeta.parser/asmeta.parser.cli/dist/AsmetaLc.jar
+
+### How to run 
+
 <p>To run the parser - in <strong>brief</strong></p>
 <pre>java -jar AsmetaLc.jar &lt;filename&gt;</pre>
 Other commands:<br/>

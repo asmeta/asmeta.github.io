@@ -15,8 +15,8 @@ The visualizer is integrated in eclipse. For installation, follow the instructio
 
 <p>You can execute two kinds of visualizations:</p>
 <ul>
-  <li><img src="http://svn.code.sf.net/p/asmeta/code/code/experimental/asmeta.visualizer/asmeta.visualizer.plugin/icons/basicVisualizer.gif"/> basic</li>
-  <li><img src="http://svn.code.sf.net/p/asmeta/code/code/experimental/asmeta.visualizer/asmeta.visualizer.plugin/icons/semanticVisualizer.gif"/> semantic</li>
+  <li><img src="https://github.com/asmeta/asmeta/raw/master/code/extensions/asmeta.visualizer/asmeta.visualizer.plugin/icons/basicVisualizer.gif"/> basic</li>
+  <li><img src="https://github.com/asmeta/asmeta/raw/master/code/extensions/asmeta.visualizer/asmeta.visualizer.plugin/icons/semanticVisualizer.gif"/> semantic</li>
 </ul>
 
 ## Paper

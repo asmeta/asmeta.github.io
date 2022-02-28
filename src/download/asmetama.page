@@ -17,7 +17,7 @@ http://nusmv.fbk.eu/</a>
 <p>In order to run the model advisor you have:</p>
 <ul>
   <li>Select the desired metaproperties in Window -&gt; Preferences -&gt; Asmeta -&gt; AsmetaMA</li>
-  <li>Run the tool from the toolbar <img src="http://svn.code.sf.net/p/asmeta/code/code/experimental/asmetamodeladvisor/asmeta.modeladvisor.ui/icons/runAsmetaMA.gif"/> </li>
+  <li>Run the tool from the toolbar <img src="https://github.com/asmeta/asmeta/raw/master/code/extensions/asmeta.modeladvisor/asmeta.modeladvisor.ui/icons/runAsmetaMA.gif"/> </li>
 </ul>
 
 

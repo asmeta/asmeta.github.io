@@ -14,7 +14,7 @@ The animator works in eclipse, to install it, follow the instructions [here](./i
 <p>In order to animate the models you have:</p>
 <ul>
   <li>TODO</li>
-  <li>Run the tool from the toolbar <img src="http://svn.code.sf.net/p/asmeta/code/code/experimental/asmetamodeladvisor/asmeta.modeladvisor.ui/icons/runAsmetaMA.gif"/> </li>
+  <li>Run the tool from the toolbar <img src="https://github.com/asmeta/asmeta/raw/master/code/extensions/asmeta.animator/asmeta.animator.ui/icons/runAnimatorInt.gif"/> </li>
 </ul>
 
 ## Paper
