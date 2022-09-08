@@ -18,9 +18,9 @@ Libraries with temporal operators can be downloaded from here:
 
 <https://github.com/asmeta/asmeta/blob/master/asm_examples/STDL>
 
-*  CTL library - (download it)[https://raw.githubusercontent.com/asmeta/asmeta/master/asm_examples/STDL/CTLlibrary.asm]
+*  CTL library - [download it](https://raw.githubusercontent.com/asmeta/asmeta/master/asm_examples/STDL/CTLlibrary.asm)
 
-*  LTL library - (download it)[https://raw.githubusercontent.com/asmeta/asmeta/master/asm_examples/STDL/LTLlibrary.asm]
+*  LTL library - [download it](https://raw.githubusercontent.com/asmeta/asmeta/master/asm_examples/STDL/LTLlibrary.asm)
 
 ### Use in eclipse
 <p>You can run the tool in two modes:</p>
