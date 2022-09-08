@@ -1,3 +1,5 @@
 --- paths
 /**/*.pdf:
   handler: copy 
+/**/*.xhtml:
+  handler: copy   
