@@ -13,5 +13,5 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       
-      - run: gem install webgen
+      - run: sudo gem install webgen
       - run: webgen
