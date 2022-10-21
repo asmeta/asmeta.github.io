@@ -12,6 +12,6 @@ jobs:
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-      
+      - uses: actions/checkout@v3
       - run: sudo gem install webgen
       - run: webgen
