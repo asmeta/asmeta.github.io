@@ -16,6 +16,7 @@ The validator can be used either embedded in eclipse or as standalone program. F
 <ul>
   <li><img src="https://github.com/asmeta/asmeta/raw/master/code/extensions/asmeta.validator/asmeta.validator.ui/icons/runValidator.gif"/> executes the scenario</li>
   <li><img src="https://github.com/asmeta/asmeta/raw/master/code/extensions/asmeta.validator/asmeta.validator.ui/icons/runValidatorAndCoverage.gif"/> executes the scenario and computes the coverage</li>
+  <li><img src="https://github.com/asmeta/asmeta/raw/master/code/extensions/asmeta.validator/asmeta.validator.ui/icons/runValidatorA.gif"/> executes the scenario in the animator</li>
 </ul>
 
 ### Download as standalone
