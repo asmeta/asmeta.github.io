@@ -32,6 +32,7 @@ Around the AsmM we have developed and we are developing a <a href="download/inde
 </ul-->
 
 ## News
+**Mar 23:** new relaese 23.03 with several bug fixes is now available
 **Oct 22:** We present the work Compositional Simulation of ASM for Safety Critical Systems at [FACS 2022](https://facs-conference.github.io/2022/)<br/>
 **Jun 22:** Asmeta is presented at [IVOIRE worskhop](https://isse.jku.at/ivoire/index.php/IVOIRE_Workshop_2022)<br/>
 **Nov 21:** Our work Automatic test generation with Asmeta for the Mechanical Ventilator Milano controller is presented at ICTSS 2021<br/>
