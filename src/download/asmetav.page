@@ -20,12 +20,13 @@ The validator can be used either embedded in eclipse or as standalone program. F
 </ul>
 
 ### Download as standalone
-<p>Download the validator: <a
- href="https://github.com/asmeta/asmeta/raw/master/code/extensions/asmeta.validator/asmeta.validator/dist/AsmetaV.jar"</a></p>
-<h3>How to run<br/>
-</h3>
+Download the validator: [AsmetaV.jar](https://github.com/asmeta/asmeta/raw/master/code/extensions/asmeta.validator/asmeta.validator/dist/AsmetaV.jar)
+
+### How to run
+
 To run the ASM <span style="font-weight: bold;">validator - in brief</span>
 <pre>java -jar AsmetaV.jar &lt;filename&gt; OR &lt;DIR&gt;</pre>
-where &lt;filename&gt; is a valid avalla file or &lt;DIR&gt; is adirectory containing the avalla files
+where &lt;filename&gt; is a valid avalla file or &lt;DIR&gt; is a directory containing the avalla files (all will be executed)
+
 ## Paper
 It has been presented in the <a href="../papers/index.html#ABZ08">ABZ08 paper</a>.
