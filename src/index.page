@@ -6,7 +6,17 @@ sort_info: 1
 ---
 Asmeta is a framework for the Abstract State Machines (ASMs) formal method. It is composed of different <a href="download/index.html">tools</a> for performing different validation and verification activities.
 
-It is based on the definition of a <a href="metaapproach.html">metamodel</a> for ASMs. For the <strong>metamodel semantics</strong>, we adopt the ASMs semantics given in the <a href="http://www.di.unipi.it/~boerger/AsmBook/">ASM book</a>.
+It is based on the definition of a <a href="metaapproach.html">metamodel</a> for ASMs. For the <strong>metamodel semantics</strong>, 
+we adopt the ASMs semantics given in the <a href="http://www.di.unipi.it/~boerger/AsmBook/">ASM book</a>.
+
+You can find information on how to [download and install the tools](download).
+
+The documentation about the language and the tools can be found [here](userdoc).
+
+The **source code** can be found in the github repository https://github.com/asmeta/asmeta.
+
+
+
 <!--p>A standard <strong>AsmM Library</strong> containing predefined ASM domains and functions is also provided.</p-->
 
 <!--p>Around the AsmM we have developed and we are developing a <a href="download/index.html">set of tools</a>.</p-->
@@ -38,7 +48,7 @@ Around the AsmM we have developed and we are developing a <a href="download/inde
 **Nov 21:** Our work Automatic test generation with Asmeta for the Mechanical Ventilator Milano controller is presented at ICTSS 2021<br/>
 **Apr 21:** Asmeta now supports time - see our paper at ABZ 2021<br/>
 **Jun 20:** Asmeta moves to github<br/>
-**Oct 19:** we present the usability aspects of Asmeta at AFFORD 2019<br/>
+<!--**Oct 19:** we present the usability aspects of Asmeta at AFFORD 2019<br/>
 **Apr 19:** we present the Asmeta scenario refiner at A-MOST 2019<br/>
 **Oct 18:** we present the generation of Behavior-Driven Development C++ Tests from ASM Scenarios at IWCFS 2018<br/>
 **Oct 18:** we present the validation of the translation of ASMs to C++ at ICTSS 2018<br/>
@@ -60,7 +70,7 @@ Around the AsmM we have developed and we are developing a <a href="download/inde
 **Oct 08:** we present Asmeta at ICSEA 08<br/>
 **Sept 08:** we present Avalla and AsmetaV at ABZ 2008<br/>
 **Jun 08:** we have almost completed the porting of Asmeta to EMF<br/>
-**Oct 07:** Asmee has been presented at Eclipse-IT 07<br/>
+**Oct 07:** Asmee has been presented at Eclipse-IT 07<br/>-->
 
 <!--## Acknowledgments
 
