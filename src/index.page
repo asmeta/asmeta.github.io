@@ -13,7 +13,7 @@ You can find information on how to [download and install the tools](download).
 
 The documentation about the language and the tools can be found [here](userdoc).
 
-The **source code** can be found in the github repository https://github.com/asmeta/asmeta.
+The **source code** can be found in the github repository [https://github.com/asmeta/asmeta](https://github.com/asmeta/asmeta).
 
 
 
@@ -42,6 +42,7 @@ Around the AsmM we have developed and we are developing a <a href="download/inde
 </ul-->
 
 ## News
+**Apr 24:** new relaese 24.04 with many bug fixes is now available, including lazy evaluation<br/>
 **Mar 23:** new relaese 23.03 with several bug fixes is now available<br/>
 **Oct 22:** We present the work Compositional Simulation of ASM for Safety Critical Systems at [FACS 2022](https://facs-conference.github.io/2022/)<br/>
 **Jun 22:** Asmeta is presented at [IVOIRE worskhop](https://isse.jku.at/ivoire/index.php/IVOIRE_Workshop_2022)<br/>
