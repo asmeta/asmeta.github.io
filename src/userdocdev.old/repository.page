@@ -1,6 +1,6 @@
 ---
 title: Source repository
-in_menu: true
+in_menu: false
 ---
 
 The source base of Asmeta (including the documentation and the web site) is maintained now in a GitHub organization. The code is hosted here:
