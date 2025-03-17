@@ -1,0 +1,21 @@
+---
+title: Developer information
+in_menu: true
+routed_title: Developer documentation
+orderInfo: 9999
+---
+This section provides information for contributing to the Asmeta and to use it to develop new tools. 
+
+
+The project is now hosted on the github platform, its overview page is [https://github.com/asmeta](https://github.com/asmeta)
+
+You can submit [issues](https://github.com/asmeta/asmeta/issues).
+
+
+### Repository Organisation
+
+* under code there is the source code. In core all the basic projects. Under extensions all the tools we have built and are now part of asmeta.
+
+
+### Working with the Asmeta sources
+The better way is to use eclipse and checkout the projects from the git.
