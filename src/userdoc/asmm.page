@@ -1,6 +1,6 @@
 ---
 title: The Abstract State Machines Metamodel
-in_menu: true
+in_menu: false
 routed_title: AsmM
 ---
 <p>Our first idea have been laid down in a <a href="http://dx.doi.org/10.1007/978-3-540-24773-9_9">paper</a> presented at <a href="http://swt.informatik.uni-halle.de//ASM2004/">ASM'04</a>.
