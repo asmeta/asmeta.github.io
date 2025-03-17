@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" href="../default.css" charset="utf-8" type="text/css">
+  <title>Asmeta - Open issues and tasks</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120364030-1"></script>
+   <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-120364030-1');
+   </script>
+</head>
+
+<body>
+
+<table cellspacing="0" cellpadding="0" border="0" style="width:100%;">
+<tr>
+  <td style="padding:5px 10px 5px 10px;font-size:16pt;font-weight:bold;color:#000066;background-color:f7f7f7;border:1px solid #a5b6c6;">
+    Asmeta
+   </td>
+  <td style="padding:5px 10px 5px 10px;font-size:16pt;font-weight:bold;color:#8998a5;border-bottom:1px solid #a5b6c6;">
+    Open issues and tasks
+  </td>
+ </tr>
+<tr><td style="vertical-align:top;padding:20px 10px 80px 10px;background-color:f7f7f7;border-left:1px solid #a5b6c6;border-right:1px solid #a5b6c6;border-bottom:1px solid #a5b6c6;">
+<div id="sidebar">
+  <ul><li class="webgen-menu-level1"><a href="../index.html" hreflang="en">Overview</a></li><li class="webgen-menu-level1"><a href="../userdoc.html" hreflang="en">Documentation for users</a></li><li class="webgen-menu-level1"><a href="../userdev.html" hreflang="en">Developer information</a></li><li class="webgen-menu-level1 webgen-menu-submenu"><a href="../download/index.html" hreflang="en">Asmeta toolset</a><ul><li class="webgen-menu-level2"><a href="../download/asmee.html" hreflang="en">Editor</a></li><li class="webgen-menu-level2"><a href="../download/asmetas.html" hreflang="en">Simulator</a></li><li class="webgen-menu-level2"><a href="../download/asmetav.html" hreflang="en">Validator</a></li><li class="webgen-menu-level2"><a href="../download/asmetaA.html" hreflang="en">Animator</a></li><li class="webgen-menu-level2"><a href="../download/asmetasmv.html" hreflang="en">Model checker</a></li><li class="webgen-menu-level2"><a href="../download/asmetama.html" hreflang="en">Model advisor</a></li><li class="webgen-menu-level2"><a href="../download/asmetavis.html" hreflang="en">Visualizer</a></li><li class="webgen-menu-level2"><a href="../download/asmrefprover.html" hreflang="en">Refinement prover</a></li><li class="webgen-menu-level2"><a href="../download/asmscenref.html" hreflang="en">Scenario refiner</a></li><li class="webgen-menu-level2"><a href="../download/asm2SMT.html" hreflang="en">Asm2SMT</a></li><li class="webgen-menu-level2"><a href="../download/asm2c++.html" hreflang="en">Asm2C++</a></li></ul></li><li class="webgen-menu-level1 webgen-menu-submenu"><a href="../papers/index.html" hreflang="en">Papers</a><ul><li class="webgen-menu-level2"><a href="../papers/index.html" hreflang="en">Our papers</a></li><li class="webgen-menu-level2"><a href="../papers/others.html" hreflang="en">Papers written by others</a></li></ul></li><li class="webgen-menu-level1"><a href="../people.html" hreflang="en">People</a></li><li class="webgen-menu-level1 webgen-menu-submenu webgen-menu-submenu-inhierarchy"><a href="index.html" hreflang="en">Developer documentation</a><ul><li class="webgen-menu-level2"><a href="repository.html" hreflang="en">Source repository</a></li></ul></li><li class="webgen-menu-level1"><a href="../webresources.html" hreflang="en">Web resources</a></li></ul>
+ </ul>
+</div>
+</td><td style="vertical-align:top;padding:10px 0px 5px 20px;width:80%;border-bottom:1px solid #a5b6c6;" colspan="2">
+
+ 
+<h4>Technologies</h4>
+<ul>
+  <li class="inwork">porting of the AsmM to EMF - DONE</li>
+  <li class="investigate">porting to Rational tools or Papyrus from Poseidon: initial investigation shows that MOF under rational is not well supported<br />
+  </li>
+  <li class="investigate">integration of the OCL constraints with the metamodel<br />
+  </li>
+</ul>
+<h4>AsmM</h4>
+<ul>
+  <li class="investigate">Make the link between Term and its type optional, to allow rapid prototyping without type annotations</li>
+</ul>
+<h4>AsmetaL</h4>
+<ul>
+  <li class="ok">allow the definition over concrete domains (for example domain Cluster subsetof Prod(Integer,Integer), definition a a
+function from Cluster -&gt; Integer) (0.9.2)</li>
+  <li class="investigate">put the StandardLibrary.asm in a "standard" position to allow the import without having the actual StandardLibrary in the project</li>
+</ul>
+<ul>
+</ul>
+<h4>AsmetaS<br />
+</h4>
+<ul>
+  <li class="inwork">allow expressions like choose x in Integer with 0&lt; x to be interpreted (maybe use of constraint solvers?)<br />
+  </li>
+  <li class="inwork">define a random environment for validation against the axiom (available in Asmee)<br />
+  </li>
+</ul>
+<h4>Asmeta tool set</h4>
+<ul>
+  <li class="investigate">build a visual editor using the eclipse GMF/GME</li>
+</ul>
+<h4>Asmee</h4>
+<ul>
+  <li class="ok">random simulation (0.9.2)<br />
+  </li>
+  <li class="investigate"><span style="font-weight: bold;">known bug</span>:
+if you have the C++ callisto plugin installed, the asm files are associated to the assembler editor</li>
+</ul>
+<hr />
+
+<ul>
+  <li class="ok">Done, part of this release.</li>
+  <li class="inwork">Just has to be done, will be available in one of the next releases.</li>
+  <li class="investigate">Needs some investigation whether it makes sense to implement this feature or how to implement it.</li>
+</ul>
+
+
+</td></tr>
+</table>
+
+<div id="footer">
+  Copyright &copy; 2006-2022 
+  <a href="http://fmse.di.unimi.it/" target="_blank">Formal Methods and SE Laboratory - University of Milan</a>
+  <a href="https://foselab.unibg.it/" target="_blank">Formal Methods & Software Engineering Lab - University of Bergamo</a> All rights reserved.
+        | Lastchange : 2020-10-09 10:32:27 +0200 | Generated by <a href="http://webgen.rubyforge.org" target="_blank">webgen</a></p>
+</div>
+</body>
+</html>
