@@ -2,7 +2,7 @@
 title: Developer information
 in_menu: true
 routed_title: Developer documentation
-orderInfo: 9999
+sort_info: 9999
 ---
 This section provides information for contributing to the Asmeta and to use it to develop new tools. 
 
