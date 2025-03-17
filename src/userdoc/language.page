@@ -1,6 +1,6 @@
 ---
 title: Asmeta language
-in_menu: true
+in_menu: false
 routed_title: AsmetaL
 ---
 AsmetaL is the language we use for the ASMs.
