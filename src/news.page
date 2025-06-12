@@ -1,0 +1,13 @@
+---
+title: News
+in_menu: true
+routed_title: News
+sort_info: 3
+--
+# Releases
+## release 25_06 (upcomping)
+- fix of bug  - animator does not work with TermAsRule/RuleAsTerm [135](https://github.com/asmeta/asmeta/issues/135)
+- random test generation in UI - new feature [134](https://github.com/asmeta/asmeta/issues/134)
+- several bug fixes for ATGT for the experiments for submitted paper
+- undef as monitored value [123](https://github.com/asmeta/asmeta/issues/123)
+- other minor bug 
