@@ -3,7 +3,7 @@ title: News
 in_menu: true
 routed_title: News
 sort_info: 3
---
+---
 # Releases
 ## release 25_06 (upcomping)
 - fix of bug  - animator does not work with TermAsRule/RuleAsTerm [135](https://github.com/asmeta/asmeta/issues/135)
