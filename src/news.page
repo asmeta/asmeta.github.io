@@ -4,10 +4,21 @@ in_menu: true
 routed_title: News
 sort_info: 3
 ---
-# Releases
-## release 25_06 (upcomping)
-- fix of bug  - animator does not work with TermAsRule/RuleAsTerm [135](https://github.com/asmeta/asmeta/issues/135)
+# Papers and presentations
+
+- we presented at ABZ 2025:
+    - Chiara Braghin, Giuseppe Del Castillo, Elvinia Riccobene and Simone Valentini. Using Symbolic Model Execution to Detect Vulnerabilities of Smart Contracts.
+    - Andrea Bombarda, Silvia Bonfanti, Angelo Gargantini, Nico Pellegrinelli and Patrizia Scandurra. Safety enforcement for autonomous driving on a simulated highway using Asmeta models@run.time.
+
+- we presented at NFM 2025:
+    - Andrea Bombarda, Silvia Bonfanti, Angelo Gargantini and Nico Pellegrinelli. Eliminating flakiness: deterministic control for validating nondeterministic Asmeta specifications.
+
+# Releases of the tools
+
+## release 25.06 (upcomping)
+
+- fix of bug  *animator does not work with TermAsRule/RuleAsTerm* [135](https://github.com/asmeta/asmeta/issues/135)
 - random test generation in UI - new feature [134](https://github.com/asmeta/asmeta/issues/134)
-- several bug fixes for ATGT for the experiments for submitted paper
-- undef as monitored value [123](https://github.com/asmeta/asmeta/issues/123)
-- other minor bug 
+- several bug fixes for ATGT for the experiments for submitted paper (more soon)
+- **undef** as monitored value [123](https://github.com/asmeta/asmeta/issues/123)
+- other minor bugs 
