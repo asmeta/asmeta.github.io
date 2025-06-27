@@ -6,6 +6,20 @@ routed_title: Papers
 We are actively working on Asmeta. See our personal web pages for a complete list of publication regarding Asmeta and to download the papers.  
 Other [people](others.html) are working with Asmeta as well.  
 
+### 2025
+* Chiara Braghin, Giuseppe Del Castillo, Elvinia Riccobene and Simone Valentini<br/>
+*Using Symbolic Model Execution to Detect Vulnerabilities of Smart Contracts*<br/>
+
+* Andrea Bombarda, Silvia Bonfanti, Angelo Gargantini, Nico Pellegrinelli and Patrizia Scandurra<br/>
+Safety enforcement for autonomous driving on a simulated highway using Asmeta models@run.time<br/>
+
+* Andrea Bombarda, Silvia Bonfanti, Angelo Gargantini and Nico Pellegrinelli<br/>
+Eliminating flakiness: deterministic control for validating nondeterministic Asmeta specifications<br/>
+
+### 2024 
+
+TO BE COMPLETED
+
 ### 2023 
 * Andrea Bombarda, Silvia Bonfanti, and Angelo Gargantini<br/>
 *formal MVC: a pattern for the integration of ASM specifications in UI development*<br/>
@@ -13,7 +27,7 @@ in ABZ 2023, Springer Nature Switzerland (2023): 340--357
 
 ### 2022
 * Silvia Bonfanti, Angelo Gargantini, Elvinia Riccobene, Patrizia Scandurra<br/>
-Compositional Simulation of Abstract State Machines for Safety Critical Systems<br/>
+*Compositional Simulation of Abstract State Machines for Safety Critical Systems*<br/>
 FACS 2022 -18th International Conference on Formal Aspects of Component Software, 10-11 November 2022, Oslo, Norway 
 
 
