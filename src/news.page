@@ -15,7 +15,7 @@ sort_info: 3
 
 # Releases of the tools
 
-## release 25.06 (upcomping)
+## release 25.06
 
 - fix of bug  *animator does not work with TermAsRule/RuleAsTerm* [135](https://github.com/asmeta/asmeta/issues/135)
 - random test generation in UI - new feature [134](https://github.com/asmeta/asmeta/issues/134)
