@@ -7,7 +7,7 @@ This section provides information for Asmeta users and people interested in the 
 
 ## AsmetaL language
 
-For information about the <strong>language</strong> we have derived from the metamodel, examples and a quick guide how to write specifications in this language, see the <a href="language.html"><strong>AsmetaL</strong> documentation</a>.
+For information about the <strong>language</strong> we have derived from the metamodel, examples and a quick guide how to write specifications in this language, see:
 
 * A [quick guide](/material/AsmetaL_quickguide.html) of the concrete notation
 * A [more complete guide about the language](/material/AsmetaL_guide.pdf)
