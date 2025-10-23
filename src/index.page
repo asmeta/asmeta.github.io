@@ -11,7 +11,7 @@ we adopt the ASMs semantics given in the <a href="http://www.di.unipi.it/~boerge
 
 You can find information on how to [download and install the tools](download).
 
-The documentation about the language and the tools can be found [here](userdoc).
+The documentation about the language and the tools can be found [here](userdoc.html).
 
 The **source code** can be found in the github repository [https://github.com/asmeta/asmeta](https://github.com/asmeta/asmeta).
 
