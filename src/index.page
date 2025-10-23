@@ -40,17 +40,20 @@ Around the AsmM we have developed and we are developing a <a href="download/inde
 </ul-->
 
 ## News
+**Oct 25** new release 25.09 with several improvements - including a choose with infinite domain<br/>
+**Jun 25** new papers at ABZ2025 and NFM2025<br/>
+**Jun 25** new release 25.06 with several improvements - including **undef** as monitored value<br/>
 **Mar 25** new release 25.03 with several improvements - including a new *pick* command for avalla (more soon)<br/>
 **Sep 24** we will have a tutorial on asmeta at FM24<br/>
 **Jun 24** new release 24.06 with several improvements<br/>
 **Apr 24** new relaese 24.04 with many bug fixes is now available, including lazy evaluation<br/>
 **Mar 23** new relaese 23.03 with several bug fixes is now available<br/>
-**Oct 22** We present the work Compositional Simulation of ASM for Safety Critical Systems at [FACS 2022](https://facs-conference.github.io/2022/)<br/>
+<!--**Oct 22** We present the work Compositional Simulation of ASM for Safety Critical Systems at [FACS 2022](https://facs-conference.github.io/2022/)<br/>
 **Jun 22** Asmeta is presented at [IVOIRE worskhop](https://isse.jku.at/ivoire/index.php/IVOIRE_Workshop_2022)<br/>
 **Nov 21** Our work Automatic test generation with Asmeta for the Mechanical Ventilator Milano controller is presented at ICTSS 2021<br/>
 **Apr 21** Asmeta now supports time - see our paper at ABZ 2021<br/>
 **Jun 20** Asmeta moves to github<br/>
-<!--**Oct 19:** we present the usability aspects of Asmeta at AFFORD 2019<br/>
+**Oct 19:** we present the usability aspects of Asmeta at AFFORD 2019<br/>
 **Apr 19:** we present the Asmeta scenario refiner at A-MOST 2019<br/>
 **Oct 18:** we present the generation of Behavior-Driven Development C++ Tests from ASM Scenarios at IWCFS 2018<br/>
 **Oct 18:** we present the validation of the translation of ASMs to C++ at ICTSS 2018<br/>
