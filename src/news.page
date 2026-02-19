@@ -13,12 +13,6 @@ sort_info: 3
 - we presented at NFM 2025:
     - Andrea Bombarda, Silvia Bonfanti, Angelo Gargantini and Nico Pellegrinelli. Eliminating flakiness: deterministic control for validating nondeterministic Asmeta specifications.
 
-# Releases of the tools
+# News in the releases of the tools
 
-## release 25.06
-
-- fix of bug  *animator does not work with TermAsRule/RuleAsTerm* [135](https://github.com/asmeta/asmeta/issues/135)
-- random test generation in UI - new feature [134](https://github.com/asmeta/asmeta/issues/134)
-- several bug fixes for ATGT for the experiments for submitted paper (more soon)
-- **undef** as monitored value [123](https://github.com/asmeta/asmeta/issues/123)
-- other minor bugs 
+https://github.com/asmeta/asmeta/blob/master/CHANGE_LOG.md
