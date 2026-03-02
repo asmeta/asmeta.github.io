@@ -1,5 +1,8 @@
 ---
-title: AsmM Concrete Syntax 2.0.0 - A Quick Guide
+title: AsmetaL Syntax - Reference guide
+in_menu: true
+routed_title: Asmeta Language
+sort_info: 9999
 ---
 # AsmetaL syntax *A Quick Guide*
 
