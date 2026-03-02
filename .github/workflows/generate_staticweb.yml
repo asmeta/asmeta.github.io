@@ -13,7 +13,7 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - uses: actions/checkout@v3
-      - run: sudo gem install maruku
+#      - run: sudo gem install maruku
       - run: sudo gem install webgen
       - run: webgen
       - name: Commit files
