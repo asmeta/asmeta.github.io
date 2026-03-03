@@ -2,4 +2,4 @@
 /**/*.pdf:
   handler: copy 
 /**/*.xhtml:
-  handler: copy   
+  handler: copy
