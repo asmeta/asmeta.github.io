@@ -7,7 +7,7 @@ sort_info: 8
 **Asm2SMT** produces a symbolic representation of an AsmetaL model.<br/>
 ### Download
 
-Download the tool: <a
+Download the tool:
 
 [AsmetaToSMT.jar](https://github.com/asmeta/asmeta/raw/master/code/extensions/asmeta.refprover/translatorToSMT/dist/AsmetaToSMT.jar)
 
