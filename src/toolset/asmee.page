@@ -7,7 +7,7 @@ sort_info: 1
 A <strong>graphical front-end</strong> called Asmee (ASM Eclipse Environment) which allows to edit and manipulate AsmM models. This environment is implemented as eclipse plug-in.
 
 ### Eclipse plugin
-The editor is available as eclipse plugin. Follow the instructions [here](./index.html#installing-asmeta-in-eclipse)
+The editor is available as eclipse plugin. Follow the instructions [here](../download/index.html)
 
 <!--p>Download <a href="http://fmse.di.unimi.it/asmeta/download/asmee_site.zip"> asmee_site.zip</a> which contains a zipped version of the asmee update site. Unzip it and copy it in a temporary directory (for example c:\temp\asmee). Then update eclipse like in Option 1, except that in step 3 choose new Local Site and select the directory (c:\temp\asmee) where you have unzipped the asmee_site.</p-->
 

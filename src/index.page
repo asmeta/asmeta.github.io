@@ -4,7 +4,9 @@ in_menu: true
 routed_title: Overview
 sort_info: 1
 ---
-Asmeta is a framework for the Abstract State Machines (ASMs) formal method. It is composed of different <a href="download/index.html">tools</a> for performing different validation and verification activities.
+Asmeta is a framework for the [**Abstract State Machines (ASMs)**](https://en.wikipedia.org/wiki/Abstract_state_machine) formal method. 
+
+It is composed of different <a href="toolset/index.html">tools</a> for performing different validation and verification activities.
 
 It is based on the definition of a <a href="metaapproach.html">metamodel</a> for ASMs. For the <strong>metamodel semantics</strong>, 
 we adopt the ASMs semantics given in the <a href="http://www.di.unipi.it/~boerger/AsmBook/">ASM book</a>.
@@ -19,25 +21,6 @@ The **source code** can be found in the github repository [https://github.com/as
 
 <!--p>Around the AsmM we have developed and we are developing a <a href="download/index.html">set of tools</a>.</p-->
 
-<!--h2>Asmeta tool set</h2>
-
-Around the AsmM we have developed and we are developing a <a href="download/index.html">set of tools</a>:
-
-<ul>
-  <li>(available) the AsmetaL compiler: to compile an ASM specification written in AsmetaL to xmi</li>
-  <li>(available) the AsmetaS simulator: to simulate an ASM specification</li>
-  <li>(available) Asmee: a plugin for eclipse for AsmetaL and AsmetaS</li>
-  <li>(available) ATGT: a test generator for Asms</li>
-  <li>(available) the AsmetaV validator: to test/validate an ASM specification</li>
-  <li>(available) the AsmetaSMV model checker: to model check an Asm specification</li>
-  <li>(available) the AsmetaMA model advisor: to check for common defects of AsmetaL models</li>
-  <li>(available) the AsmetaRE: to generate executable ASMs from Use Case models</li>
-  <li>(available) the SCA-ASM: a language and an engine for service oriented components</li>
-  <li>(available) AsmRefProver: a prover of refinement correctness</li>
-  <li>(available) AsmetaVis: a graphical visualizer for ASMs</li>
-  <li>(work in progress) a graphical editor</li>
-  <li>(work in progress) Asmeta animator</li>
-</ul-->
 
 ## News
 **Feb 26** new release 26.02 with some bug fixes and new features<br/>

@@ -4,7 +4,14 @@ in_menu: true
 routed_title: Asm2C++
 sort_info: 9
 ---
-Asm2C++ is a tool for C++ code generation from Abstract State Machines. It allows the generation of C++ for the 
+Asm2C++ is a tool for C++ code generation from Abstract State Machines. It allows the generation of C++ for the asmeta specifications.
+
+## How to install
+
+Currently AsmetaL2CPP is available only as jar file: <https://github.com/asmeta/asmeta/blob/master/code/experimental/asmetal2cpp/asmetal2cpp.cli/dist/Asmeta2Cpp.jar>. 
+It can be executed as jar file:
+<pre>java -jar Asmeta2Cpp.jar asmetalFileName.asm</pre> 
+
 
 ## Papers
 
@@ -30,4 +37,4 @@ with 8th International Conference on Model &amp; Data Engineering (MEDI 2018) Ma
 
 ## Code
 
-The source code can be found here: <https://github.com/asmeta/asmeta/tree/master/code/experimental/asmetal2cpp> - the plugin will be available soon.
+The source code can be found here: <https://github.com/asmeta/asmeta/tree/master/code/experimental/asmetal2cpp>.

@@ -1,7 +1,7 @@
 ---
 title: Documentation for users
 in_menu: true
-sort_info: 2
+sort_info: 3
 ---
 This section provides information for Asmeta users and people interested in the Asmeta project.
 
@@ -41,7 +41,7 @@ All the instructions to follow the tutorial are available on [Zenodo](https://ze
 
 
 ## Asmeta Tools
-<p>For information about the <strong>tools</strong> in the Asmeta tool set, how to use them see the <a href="../download/index.html">tools section</a>.</p>
+<p>For information about the <strong>tools</strong> in the Asmeta tool set, how to use them see the <a href="../toolset/index.html">tools section</a>.</p>
 
 
 ## Asmeta Metamodel

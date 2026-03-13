@@ -8,8 +8,7 @@ sort_info: 5
 
 ### Installation 
 
-The model advisor can be used either embedded in eclipse or as standalone program. For the eclipse version, follow the instructions [here](./index.html#installing-asmeta-in-eclipse)
-
+The model advisor can be used either embedded in eclipse or as standalone program. For the eclipse version, follow the instructions  Follow the instructions [here](../download/index.html).
 The NuSMV model checker must be installed in the system and added to the system path. NuSMV can be downloaded from here: <a href="http://nusmv.fbk.eu/" target='_blank'>
 http://nusmv.fbk.eu/</a>
 

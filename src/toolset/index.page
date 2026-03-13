@@ -1,0 +1,25 @@
+---
+title: Asmeta Tools
+in_menu: false
+routed_title: Asmeta toolset
+sort_info: 0005
+---
+We have developed and are distributing the following (stable) tools
+
+* <a href="asmee.html">Asmee:</a> an editor for ASMs written in the AsmetaL language
+* <a href="asmetalc.html">AsmetaLc:</a> a compiler/parser for AsmetaL models
+* <a href="asmetas.html">AsmetaS:</a> a simulator
+* <a href="asmetav.html">AsmetaV</a>: a scenario-based validator
+* <a href="asmetaA.html">AsmetaA:</a> an execution animator
+* <a href="asmetasmv.html">AsmetaSMV</a>: a model checker based on NuSMV
+* <a href="asmetama.html">AsmetaMA</a>: a model advisor
+* <a href="asmetavis.html">AsmetaVis</a>: a graphical visualizer of AsmetaL models
+* <a href="asmrefprover.html">AsmetaRefProver</a>: a prover of refinement correctness
+* <a href="asm2SMT.html">Asm2SMT</a>: a translator from AsmetaL models to Yices logical contexts
+* <a href="asm2c++.html">Asm2C++</a>: a code generator
+* **[ATGT](atgt.html)**: an abstract test generator
+
+
+Some tools are provided both as eclipse plugins and standalone jars that can be executed at command line.
+ 
+To install and execute the tools see the individual pages or [how to install asmeta](../download/).

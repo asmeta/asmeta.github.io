@@ -9,7 +9,7 @@ The **AsmetaSMV** model checker can be used to automatically verify Asmeta prope
 
 ### Installation 
 
-The model checker can be used either embedded in eclipse or as standalone program. For the eclipse version, follow the instructions [here](./index.html#installing-asmeta-in-eclipse)
+The model checker can be used either embedded in eclipse or as standalone program. For the eclipse version, follow the instructions  Follow the instructions [here](../download/index.html)
 
 The NuSMV model checker must be installed in the system and added to the system path. NuSMV can be downloaded from here: <a href="http://nusmv.fbk.eu/" target='_blank'>
 http://nusmv.fbk.eu/</a>
@@ -18,9 +18,9 @@ Libraries with temporal operators can be downloaded from here:
 
 <https://github.com/asmeta/asmeta/blob/master/asm_examples/STDL>
 
-*  CTL library - [download it](https://raw.githubusercontent.com/asmeta/asmeta/master/asm_examples/STDL/CTLlibrary.asm)
+*  CTL library - [download it](https://raw.githubusercontent.com/asmeta/asmeta/master/asm_examples/STDL/CTLLibrary.asm)
 
-*  LTL library - [download it](https://raw.githubusercontent.com/asmeta/asmeta/master/asm_examples/STDL/LTLlibrary.asm)
+*  LTL library - [download it](https://raw.githubusercontent.com/asmeta/asmeta/master/asm_examples/STDL/LTLLibrary.asm)
 
 ### Use in eclipse
 <p>You can run the tool in two modes:</p>

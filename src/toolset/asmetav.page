@@ -9,7 +9,7 @@ sort_info: 3
 
 ### Installation 
 
-The validator can be used either embedded in eclipse or as standalone program. For the eclipse version, follow the instructions [here](./index.html#installing-asmeta-in-eclipse)
+The validator can be used either embedded in eclipse or as standalone program. For the eclipse version, follow the instructions  Follow the instructions [here](../download/index.html)
 
 ### Use in eclipse
 <p>You can run the tool in two modes:</p>

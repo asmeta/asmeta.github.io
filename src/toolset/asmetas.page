@@ -9,7 +9,7 @@ An **ASM simulator** to make AsmM models executable. Essentially, it is an inter
 
 ### Installation 
 
-The simulator can be used either embedded in eclipse or as standalone program. For the eclipse version, follow the instructions [here](./index.html#installing-asmeta-in-eclipse)
+The simulator can be used either embedded in eclipse or as standalone program. For the eclipse version, follow the instructions  Follow the instructions [here](../download/index.html)
 
 ### Use in eclipse
 

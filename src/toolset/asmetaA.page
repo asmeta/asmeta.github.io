@@ -8,13 +8,12 @@ sort_info: 4
 
 ### Installation 
 
-The animator works in eclipse, to install it, follow the instructions [here](./index.html#installing-asmeta-in-eclipse)
+The animator works in eclipse, to install it, follow the instructions  Follow the instructions [here](../download/index.html)
 
 ### Use in eclipse
 <p>In order to animate the models you have:</p>
 <ul>
-  <li>TODO</li>
-  <li>Run the tool from the toolbar <img src="https://github.com/asmeta/asmeta/raw/master/code/extensions/asmeta.animator/asmeta.animator.ui/icons/runAnimatorInt.gif"/> </li>
+  <li>Run the tool from the toolbar <img src="https://github.com/asmeta/asmeta/raw/master/code/extensions/asmeta.animator/asmeta.animator.ui/icons/runAnimatorInt.png"/> </li>
 </ul>
 
 ## Paper
