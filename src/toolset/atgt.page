@@ -15,9 +15,10 @@ ATGT is integrated in the eclipse ASMETA envirnoment. Just right click to the sp
 
 ## Supported techinques
 The current version of ATGT supports two techniques:
-* one based on the use of **model checker** NuSMV, which generates tests according to specific *testing goals*. It work only on a subset of specifications 
+
+* one based on the use of **model checker** NuSMV, which generates tests according to specific *testing goals*. It works only on a subset of specifications 
   for which ATGT is able to build test golas and to translate the spec to NuSMV (currently only finite domains are supported)
-* one is random generation for which the simulator is used instead - teh user specifies only the number of tests and their length
+* one is random generation for which the simulator is used instead - the user specifies only the number of tests and their length
 
 The tests can be generated in the avalla format (useful for validation).
   
